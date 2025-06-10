@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>wpcss Documentation</title>
+  <link rel="stylesheet" href="wpcss.css">
+  <style>
+    body { background: var(--gray-1); }
+    .doc-container { display: flex; min-height: 100vh; }
+    .doc-sidebar { width: 260px; background: var(--gray-2); padding: 2rem 1rem; border-right: 1px solid var(--gray-3); }
+    .doc-sidebar ul { list-style: none; padding: 0; }
+    .doc-sidebar li { margin-bottom: 1rem; }
+    .doc-sidebar a { color: var(--blue-6); text-decoration: none; font-weight: 500; }
+    .doc-sidebar a:hover { text-decoration: underline; }
+    .doc-main { flex: 1; padding: 2rem 3vw; }
+    .doc-section { margin-bottom: 3rem; }
+    .doc-example { background: var(--white); border: 1px solid var(--gray-3); border-radius: 0.5rem; padding: 1.5rem; margin-bottom: 1rem; }
+    .doc-code { background: var(--gray-2); border-radius: 0.25rem; padding: 1rem; font-size: 0.98em; font-family: SFMono-Regular, Menlo, Monaco, Consolas, monospace; overflow-x: auto; }
+    @media (max-width: 900px) { .doc-sidebar { display: none; } .doc-main { padding: 1rem; } }
+  </style>
+</head>
+<body>
+  <div class="doc-container">
+    <nav class="doc-sidebar">
+      <h2>wpcss Docs</h2>
+      <ul>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#grid">Grid System</a></li>
+        <li><a href="#spacing">Spacing</a></li>
+        <li><a href="#typography">Typography</a></li>
+        <li><a href="#colors">Colors</a></li>
+        <li><a href="#buttons">Buttons</a></li>
+        <li><a href="#forms">Forms</a></li>
+        <li><a href="#components">Components</a></li>
+        <li><a href="#helpers">Helpers</a></li>
+      </ul>
+    </nav>
+    <main class="doc-main">
+      <section class="doc-section" id="intro">
+        <h1>wpcss Documentation</h1>
+        <p>A utility-first CSS framework inspired by Bootstrap, Tailwind, Materialize, and W3CSS. Use the navigation to explore available utilities and components.</p>
+      </section>
+      <section class="doc-section" id="grid">
+        <h2>Grid System</h2>
+        <p>Use <code>.row</code> and <code>.col</code> or responsive column classes like <code>.col-4</code>, <code>.col-m-6</code>, etc. for layout.</p>
+        <div class="doc-example">
+          <div class="row">
+            <div class="col-4 bg-blue-2 p2 t-c">.col-4</div>
+            <div class="col-4 bg-blue-3 p2 t-c">.col-4</div>
+            <div class="col-4 bg-blue-4 p2 t-c">.col-4</div>
+          </div>
+        </div>
+        <div class="doc-code">&lt;div class="row"&gt;
+  &lt;div class="col-4 bg-blue-2 p2 t-c"&gt;.col-4&lt;/div&gt;
+  &lt;div class="col-4 bg-blue-3 p2 t-c"&gt;.col-4&lt;/div&gt;
+  &lt;div class="col-4 bg-blue-4 p2 t-c"&gt;.col-4&lt;/div&gt;
+&lt;/div&gt;</div>
+      </section>
+      <section class="doc-section" id="spacing">
+        <h2>Spacing Utilities</h2>
+        <p>Margin and padding classes: <code>.m1</code>, <code>.mt2</code>, <code>.p3</code>, <code>.pl4</code>, etc.</p>
+        <div class="doc-example">
+          <div class="bg-gray-3 p3 m2">.p3 .m2</div>
+        </div>
+        <div class="doc-code">&lt;div class="bg-gray-3 p3 m2"&gt;.p3 .m2&lt;/div&gt;</div>
+      </section>
+      <section class="doc-section" id="typography">
+        <h2>Typography</h2>
+        <p>Text size, color, alignment, and transform utilities.</p>
+        <div class="doc-example">
+          <div class="t-2 t-blue-6 t-c">Large Centered Blue Text</div>
+          <div class="t-up t-red-5">Uppercase Red</div>
+        </div>
+        <div class="doc-code">&lt;div class="t-2 t-blue-6 t-c"&gt;Large Centered Blue Text&lt;/div&gt;
+&lt;div class="t-up t-red-5"&gt;Uppercase Red&lt;/div&gt;</div>
+      </section>
+      <section class="doc-section" id="colors">
+        <h2>Color Utilities</h2>
+        <p>Background and text color classes: <code>.bg-blue-4</code>, <code>.t-red-6</code>, etc.</p>
+        <div class="doc-example">
+          <span class="badge bg-blue-4 t-white">.bg-blue-4</span>
+          <span class="badge bg-green-4 t-white">.bg-green-4</span>
+          <span class="badge bg-red-4 t-white">.bg-red-4</span>
+        </div>
+        <div class="doc-code">&lt;span class="badge bg-blue-4 t-white"&gt;.bg-blue-4&lt;/span&gt;
+&lt;span class="badge bg-green-4 t-white"&gt;.bg-green-4&lt;/span&gt;
+&lt;span class="badge bg-red-4 t-white"&gt;.bg-red-4&lt;/span&gt;</div>
+      </section>
+      <section class="doc-section" id="buttons">
+        <h2>Buttons</h2>
+        <p>Button classes: <code>.btn</code> and color variants like <code>.btn-blue-4</code>, <code>.btn-green-5</code>.</p>
+        <div class="doc-example">
+          <button class="btn btn-blue-4">Blue Button</button>
+          <button class="btn btn-green-5">Green Button</button>
+          <button class="btn btn-red-5">Red Button</button>
+        </div>
+        <div class="doc-code">&lt;button class="btn btn-blue-4"&gt;Blue Button&lt;/button&gt;
+&lt;button class="btn btn-green-5"&gt;Green Button&lt;/button&gt;
+&lt;button class="btn btn-red-5"&gt;Red Button&lt;/button&gt;</div>
+      </section>
+      <section class="doc-section" id="forms">
+        <h2>Forms</h2>
+        <p>Form controls and validation states.</p>
+        <div class="doc-example">
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-input" placeholder=" " id="demoInput">
+              <label class="form-label" for="demoInput">Text Input</label>
+            </div>
+            <div class="form-group">
+              <select class="form-select" id="demoSelect">
+                <option value="">Choose...</option>
+                <option>Option 1</option>
+                <option>Option 2</option>
+              </select>
+              <label class="form-label-select" for="demoSelect">Select</label>
+            </div>
+            <button class="btn btn-blue-5" type="submit">Submit</button>
+          </form>
+        </div>
+        <div class="doc-code">&lt;form&gt;
+  &lt;div class="form-group"&gt;
+    &lt;input type="text" class="form-input" placeholder=" " id="demoInput"&gt;
+    &lt;label class="form-label" for="demoInput"&gt;Text Input&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class="form-group"&gt;
+    &lt;select class="form-select" id="demoSelect"&gt;
+      &lt;option value=""&gt;Choose...&lt;/option&gt;
+      &lt;option&gt;Option 1&lt;/option&gt;
+      &lt;option&gt;Option 2&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;label class="form-label-select" for="demoSelect"&gt;Select&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;button class="btn btn-blue-5" type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</div>
+      </section>
+      <section class="doc-section" id="components">
+        <h2>Components</h2>
+        <p>Reusable UI components like alerts, cards, navbar, sidebar, modal, etc.</p>
+        <div class="doc-example">
+          <div class="alert alert-info">This is an info alert!</div>
+          <div class="card" style="max-width: 320px;">
+            <div class="card-header">Card Header</div>
+            <div class="card-body">Card body content goes here.</div>
+            <div class="card-footer">Card Footer</div>
+          </div>
+          <!-- Dialog Example -->
+          <button class="btn btn-blue-4" onclick="document.getElementById('demoDialogBg').style.display='flex'">Open Dialog</button>
+          <div class="wp-dialog-bg" id="demoDialogBg" style="display:none;">
+            <div class="wp-dialog" tabindex="-1">
+              <button class="wp-dialog-close" onclick="document.getElementById('demoDialogBg').style.display='none'">&times;</button>
+              <div class="wp-dialog-header">Dialog Title</div>
+              <div class="wp-dialog-content">This is a dialog box using <code>.wp-dialog</code>.</div>
+              <div class="wp-dialog-footer">
+                <button class="btn btn-gray-3" onclick="document.getElementById('demoDialogBg').style.display='none'">Cancel</button>
+                <button class="btn btn-blue-5" onclick="document.getElementById('demoDialogBg').style.display='none'">OK</button>
+              </div>
+            </div>
+          </div>
+          <!-- Modal Example -->
+          <button class="btn btn-green-5" onclick="document.getElementById('demoModalBg').style.display='flex'">Open Modal</button>
+          <div class="wp-modal-bg" id="demoModalBg" style="display:none;">
+            <div class="wp-modal" tabindex="-1">
+              <button class="wp-modal-close" onclick="document.getElementById('demoModalBg').style.display='none'">&times;</button>
+              <div class="wp-dialog-header">Modal Title</div>
+              <div class="wp-dialog-content">This is a modal using <code>.wp-modal</code>.</div>
+              <div class="wp-dialog-footer">
+                <button class="btn btn-gray-3" onclick="document.getElementById('demoModalBg').style.display='none'">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="doc-code">&lt;div class="alert alert-info"&gt;This is an info alert!&lt;/div&gt;
+&lt;div class="card"&gt;
+  &lt;div class="card-header"&gt;Card Header&lt;/div&gt;
+  &lt;div class="card-body"&gt;Card body content goes here.&lt;/div&gt;
+  &lt;div class="card-footer"&gt;Card Footer&lt;/div&gt;
+&lt;/div&gt;</div>
+        <div class="doc-code" style="margin-top:1.5rem;">
+&lt;!-- Dialog Example --&gt;
+&lt;button class="btn btn-blue-4" onclick="document.getElementById('demoDialogBg').style.display='flex'"&gt;Open Dialog&lt;/button&gt;
+&lt;div class="wp-dialog-bg" id="demoDialogBg" style="display:none;"&gt;
+  &lt;div class="wp-dialog" tabindex="-1"&gt;
+    &lt;button class="wp-dialog-close" onclick="document.getElementById('demoDialogBg').style.display='none'"&gt;&amp;times;&lt;/button&gt;
+    &lt;div class="wp-dialog-header"&gt;Dialog Title&lt;/div&gt;
+    &lt;div class="wp-dialog-content"&gt;This is a dialog box using &lt;code&gt;.wp-dialog&lt;/code&gt;.&lt;/div&gt;
+    &lt;div class="wp-dialog-footer"&gt;
+      &lt;button class="btn btn-gray-3" onclick="document.getElementById('demoDialogBg').style.display='none'"&gt;Cancel&lt;/button&gt;
+      &lt;button class="btn btn-blue-5" onclick="document.getElementById('demoDialogBg').style.display='none'"&gt;OK&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Modal Example --&gt;
+&lt;button class="btn btn-green-5" onclick="document.getElementById('demoModalBg').style.display='flex'"&gt;Open Modal&lt;/button&gt;
+&lt;div class="wp-modal-bg" id="demoModalBg" style="display:none;"&gt;
+  &lt;div class="wp-modal" tabindex="-1"&gt;
+    &lt;button class="wp-modal-close" onclick="document.getElementById('demoModalBg').style.display='none'"&gt;&amp;times;&lt;/button&gt;
+    &lt;div class="wp-dialog-header"&gt;Modal Title&lt;/div&gt;
+    &lt;div class="wp-dialog-content"&gt;This is a modal using &lt;code&gt;.wp-modal&lt;/code&gt;.&lt;/div&gt;
+    &lt;div class="wp-dialog-footer"&gt;
+      &lt;button class="btn btn-gray-3" onclick="document.getElementById('demoModalBg').style.display='none'"&gt;Close&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+        </div>
+      </section>
+      <section class="doc-section" id="helpers">
+        <h2>Helpers & Utilities</h2>
+        <p>Helper classes for positioning, display, overflow, z-index, etc.</p>
+        <div class="doc-example">
+          <div class="d-f of-a z-5 bg-gray-2 p2" style="height: 60px;">.d-f .of-a .z-5</div>
+        </div>
+        <div class="doc-code">&lt;div class="d-f of-a z-5 bg-gray-2 p2" style="height: 60px;"&gt;.d-f .of-a .z-5&lt;/div&gt;</div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
