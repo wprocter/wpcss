@@ -49,11 +49,11 @@ blockquote, .blockquote {  margin: 1rem 0;  padding: 1rem 1.5rem;  border-left: 
    ======================================================================== */
 
 /* Typography Utilities */
-.t-1 { font-size: 1.25rem !important; }
-.t-2 { font-size: 1.5rem !important; }
-.t-3 { font-size: 2rem !important; }
-.t-4 { font-size: 4rem !important; }
-.t-5 { font-size: 5rem !important; }
+.t1 { font-size: 1.25rem !important; }
+.t2 { font-size: 1.5rem !important; }
+.t3 { font-size: 2rem !important; }
+.t4 { font-size: 4rem !important; }
+.t5 { font-size: 5rem !important; }
 
 .t-l { text-align: left !important; }
 .t-c { text-align: center !important; }
@@ -327,6 +327,17 @@ blockquote, .blockquote {  margin: 1rem 0;  padding: 1rem 1.5rem;  border-left: 
 .mb3 { margin-bottom: 2.5rem !important; }
 .mb4 { margin-bottom: 4rem !important; }
 .mb5 { margin-bottom: 5rem !important; }
+.mx1{ margin-left: 0.5rem !important; margin-right: 0.5rem !important; }
+.mx2{ margin-left: 1.5rem !important; margin-right: 1.5rem !important; }
+.mx3{ margin-left: 2.5rem !important; margin-right: 2.5rem !important; }
+.mx4{ margin-left: 4rem !important; margin-right: 4rem !important; }
+.mx5{ margin-left: 5rem !important; margin-right: 5rem !important; }
+.my1{ margin-top: 0.5rem !important; margin-bottom: 0.5rem !important; }
+.my2{ margin-top: 1.5rem !important; margin-bottom: 1.5rem !important; }
+.my3{ margin-top: 2.5rem !important; margin-bottom: 2.5rem !important; }
+.my4{ margin-top: 4rem !important; margin-bottom: 4rem !important; }
+.my5{ margin-top: 5rem !important; margin-bottom: 5rem !important; }
+
 
 /* Padding Utilities */
 .p1 { padding: 0.5rem !important; }
@@ -354,6 +365,16 @@ blockquote, .blockquote {  margin: 1rem 0;  padding: 1rem 1.5rem;  border-left: 
 .pb3 { padding-bottom: 2.5rem !important; }
 .pb4 { padding-bottom: 4rem !important; }
 .pb5 { padding-bottom: 5rem !important; }
+.px1 { padding-left: 0.5rem !important; padding-right: 0.5rem !important; }
+.px2 { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }   
+.px3 { padding-left: 2.5rem !important; padding-right: 2.5rem !important; }
+.px4 { padding-left: 4rem !important; padding-right: 4rem !important; }
+.px5 { padding-left: 5rem !important; padding-right: 5rem !important; }
+.py1 { padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }
+.py2 { padding-top: 1.5rem !important; padding-bottom: 1.5rem !important; }
+.py3 { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important; }
+.py4 { padding-top: 4rem !important; padding-bottom: 4rem !important; }
+.py5 { padding-top: 5rem !important; padding-bottom: 5rem !important; }
 
 /* ========================================================================
 
@@ -513,11 +534,11 @@ blockquote, .blockquote {  margin: 1rem 0;  padding: 1rem 1.5rem;  border-left: 
 /* ========================================================================
   Section: Effects Utilities (Shadow, Opacity, Filters)
    ======================================================================== */
-.shadow-1 { box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px; }
-.shadow-2 { box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;}
-.shadow-3 { box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;}
-.shadow-4 { box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;}
-.shadow-5 { box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px; }
+.shadow1 { box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px; }
+.shadow2 { box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;}
+.shadow3 { box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;}
+.shadow4 { box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;}
+.shadow5 { box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px; }
 .e-o-1 { opacity: 0.8 !important; }
 .e-o-2 { opacity: 0.6 !important; }
 .e-o-3 { opacity: 0.4 !important; }
@@ -553,8 +574,8 @@ blockquote, .blockquote {  margin: 1rem 0;  padding: 1rem 1.5rem;  border-left: 
 /* ========================================================================
   Section: Grid & Layout Utilities
    ======================================================================== */
-.row {display: flex;flex-wrap: wrap;margin-left: -0.5rem; margin-right: -0.5rem;}
-.col {flex: 1 0 0%;padding-left: 0.5rem; padding-right: 0.5rem;}
+.row {display: flex;flex-wrap: wrap; margin-left: -0.5rem; margin-right: -0.5rem;}
+.col {flex: 1 0 0%; padding-left: 0.5rem; padding-right: 0.5rem;}
 /* ========================================================================
   Section: Container Utilities
    ======================================================================== */
@@ -592,64 +613,64 @@ img.img-fit, .img-fit {  width: 100%;  height: auto;  object-fit: cover;  displa
 /* ========================================================================
    Section: Card Utilities
 ======================================================================== */
-.card {position: relative;  display: flex;  flex-direction: column;  min-width: 0;  word-wrap: break-word;  background-color: var(--white);  background-clip: border-box;  border: 1px solid var(--gray-3);  border-radius: 0.5rem;  box-shadow: 0  0.125rem 0.25rem rgba(0,0,0,0.05);  margin-bottom: 1.5rem;}
-.card-header {  padding: 0.75rem 1.25rem;  margin-bottom: 0;  background-color: var(--gray-1);  border-bottom: 1px solid var(--gray-3);  border-top-left-radius: 0.5rem;  border-top-right-radius: 0.5rem;  font-weight: 500;  font-size: 1.125rem;}
-.card-body {  flex: 1 1 auto;  padding: 1.25rem;}
-.card-footer {  padding: 0.75rem 1.25rem;  background-color: var(--gray-1);  border-top: 1px solid var(--gray-3);  border-bottom-left-radius: 0.5rem;  border-bottom-right-radius: 0.5rem;  font-size: 0.95rem;  color: var(--gray-7);}
-.card-img {  width: 100%;  border-top-left-radius: 0.5rem;  border-top-right-radius: 0.5rem;  display: block;}
-.card-img-bottom {  width: 100%;  border-bottom-left-radius: 0.5rem;  border-bottom-right-radius: 0.5rem;  display: block;}
-.card-img-borderless {  width: 100%;  border-radius: 0 !important;  display: block;}
-.card-img-overlay {  position: absolute;  top: 0;  right: 0;  bottom: 0;  left: 0;  padding: 1.25rem;  pointer-events: none;  display: flex;  flex-direction: column;  justify-content: center;  color: var(--white);  background: rgba(0,0,0,0.3);  border-radius: 0.5rem;}
-.card-img-overlay > * {  pointer-events: auto;}
+.cd {position: relative;  display: flex;  flex-direction: column;  min-width: 0;  word-wrap: break-word;  background-color: var(--white);  background-clip: border-box;  border: 1px solid var(--gray-3);  border-radius: 0.5rem;  box-shadow: 0  0.125rem 0.25rem rgba(0,0,0,0.05);  margin-bottom: 1.5rem;}
+.cd-header {  padding: 0.75rem 1.25rem;  margin-bottom: 0;  background-color: var(--gray-1);  border-bottom: 1px solid var(--gray-3);  border-top-left-radius: 0.5rem;  border-top-right-radius: 0.5rem;  font-weight: 500;  font-size: 1.125rem;}
+.cd-body {  flex: 1 1 auto;  padding: 1.25rem;}
+.cd-footer {  padding: 0.75rem 1.25rem;  background-color: var(--gray-1);  border-top: 1px solid var(--gray-3);  border-bottom-left-radius: 0.5rem;  border-bottom-right-radius: 0.5rem;  font-size: 0.95rem;  color: var(--gray-7);}
+.cd-img {  width: 100%;  border-top-left-radius: 0.5rem;  border-top-right-radius: 0.5rem;  display: block;}
+.cd-img-bottom {  width: 100%;  border-bottom-left-radius: 0.5rem;  border-bottom-right-radius: 0.5rem;  display: block;}
+.cd-img-borderless {  width: 100%;  border-radius: 0 !important;  display: block;}
+.cd-img-overlay {  position: absolute;  top: 0;  right: 0;  bottom: 0;  left: 0;  padding: 1.25rem;  pointer-events: none;  display: flex;  flex-direction: column;  justify-content: center;  color: var(--white);  background: rgba(0,0,0,0.3);  border-radius: 0.5rem;}
+.cd-img-overlay > * {  pointer-events: auto;}
 
 /* ========================================================================
   Section: Form Utilities
    ======================================================================== */
-.form-group {  position: relative;  margin-bottom: 1.5rem;}
-.form-input {  font-size: 1rem;  padding: 0.75rem 0.75rem 0.75rem 0.75rem;  display: block;  width: 100%;  border: 1px solid var(--gray-4);  border-radius: 0.25rem;  background: var(--white);  color: var(--gray-9);  transition: border-color 0.2s, box-shadow 0.2s;  outline: none;  box-shadow: none;}
-.form-input:focus {  border-color: var(--blue-5);  box-shadow: 0 0 0 2px var(--blue-3);}
-.form-label {  position: absolute;  top: 0.95rem;  left: 0.75rem;  color: var(--gray-6);  font-size: 1rem;  pointer-events: none;  background: transparent;  transition: all 0.2s cubic-bezier(0.4,0,0.2,1);  z-index: 2;}
-.form-input:focus + .form-label,.form-input:not(:placeholder-shown) + .form-label {  top: -0.7rem;  left: 0.5rem;  font-size: 0.85rem;  color: var(--blue-5);  background: var(--white);  padding: 0 0.25em;}
-.form-input:disabled {  background: var(--gray-2);  color: var(--gray-6);  cursor: not-allowed;}
-.form-input:disabled {  background: var(--gray-2); color: var(--gray-6);  cursor: not-allowed;}
-.form-group-password {  position: relative;  margin-bottom: 1.5rem;}
-.form-input[type="password"] {  padding-right: 2.5rem;}
-.form-password-toggle {  position: absolute;  top: 50%;  right: 0.75rem;  transform: translateY(-50%);  background: none;  border: none;  color: var(--gray-6);  font-size: 1.2rem;  cursor: pointer;  z-index: 3;  padding: 0 0.25rem;  line-height: 1;}
-.form-password-toggle:focus {  outline: none;  color: var(--blue-5);}
-.form-group-select {  position: relative;  margin-bottom: 1.5rem;}
-.form-select {  display: block;  width: 100%;  padding: 0.75rem 2.25rem 0.75rem 0.75rem;  font-size: 1rem;  color: var(--gray-9);  background: var(--white);  border: 1px solid var(--gray-4);  border-radius: 0.25rem;  transition: border-color 0.2s, box-shadow 0.2s;  appearance: none;  outline: none;  box-shadow: none;  min-height: 3.25rem;}
-.form-select:focus {  border-color: var(--blue-5);  box-shadow: 0 0 0 2px var(--blue-3);}
-.form-label-select {  position: absolute;  top: 0.95rem;  left: 0.75rem;  color: var(--gray-6);  font-size: 1rem;  pointer-events: none;  background: transparent;  transition: all 0.2s cubic-bezier(0.4,0,0.2,1);  z-index: 2;}
-.form-select:focus + .form-label-select,.form-select:not([value=""]):not(:invalid) + .form-label-select {  top: -0.7rem;  left: 0.5rem;  font-size: 0.85rem;  color: var(--blue-5);  background: var(--white);  padding: 0 0.25em;}
-.form-select:disabled {  background: var(--gray-2);  color: var(--gray-6);  cursor: not-allowed;}/* Show dropdown with 5 rows (for native select) */
-.form-select[size="5"] {  height: auto;  min-height: 10.5rem;  overflow-y: auto;}
+.f-group {  position: relative;  margin-bottom: 1.5rem;}
+.f-input {  font-size: 1rem;  padding: 0.75rem 0.75rem 0.75rem 0.75rem;  display: block;  width: 100%;  border: 1px solid var(--gray-4);  border-radius: 0.25rem;  background: var(--white);  color: var(--gray-9);  transition: border-color 0.2s, box-shadow 0.2s;  outline: none;  box-shadow: none;}
+.f-input:focus {  border-color: var(--blue-5);  box-shadow: 0 0 0 2px var(--blue-3);}
+.f-label {  position: absolute;  top: 0.95rem;  left: 0.75rem;  color: var(--gray-6);  font-size: 1rem;  pointer-events: none;  background: transparent;  transition: all 0.2s cubic-bezier(0.4,0,0.2,1);  z-index: 2;}
+.f-input:focus + .f-label,.f-input:not(:placeholder-shown) + .f-label {  top: -0.7rem;  left: 0.5rem;  font-size: 0.85rem;  color: var(--blue-5);  background: var(--white);  padding: 0 0.25em;}
+.f-input:disabled {  background: var(--gray-2);  color: var(--gray-6);  cursor: not-allowed;}
+.f-input:disabled {  background: var(--gray-2); color: var(--gray-6);  cursor: not-allowed;}
+.f-group-password {  position: relative;  margin-bottom: 1.5rem;}
+.f-input[type="password"] {  padding-right: 2.5rem;}
+.f-password-toggle {  position: absolute;  top: 50%;  right: 0.75rem;  transform: translateY(-50%);  background: none;  border: none;  color: var(--gray-6);  font-size: 1.2rem;  cursor: pointer;  z-index: 3;  padding: 0 0.25rem;  line-height: 1;}
+.f-password-toggle:focus {  outline: none;  color: var(--blue-5);}
+.f-group-select {  position: relative;  margin-bottom: 1.5rem;}
+.f-select {  display: block;  width: 100%;  padding: 0.75rem 2.25rem 0.75rem 0.75rem;  font-size: 1rem;  color: var(--gray-9);  background: var(--white);  border: 1px solid var(--gray-4);  border-radius: 0.25rem;  transition: border-color 0.2s, box-shadow 0.2s;  appearance: none;  outline: none;  box-shadow: none;  min-height: 3.25rem;}
+.f-select:focus {  border-color: var(--blue-5);  box-shadow: 0 0 0 2px var(--blue-3);}
+.f-label-select {  position: absolute;  top: 0.95rem;  left: 0.75rem;  color: var(--gray-6);  font-size: 1rem;  pointer-events: none;  background: transparent;  transition: all 0.2s cubic-bezier(0.4,0,0.2,1);  z-index: 2;}
+.f-select:focus + .f-label-select,.f-select:not([value=""]):not(:invalid) + .f-label-select {  top: -0.7rem;  left: 0.5rem;  font-size: 0.85rem;  color: var(--blue-5);  background: var(--white);  padding: 0 0.25em;}
+.f-select:disabled {  background: var(--gray-2);  color: var(--gray-6);  cursor: not-allowed;}/* Show dropdown with 5 rows (for native select) */
+.f-select[size="5"] {  height: auto;  min-height: 10.5rem;  overflow-y: auto;}
 .select2-container--default .select2-selection--single {  height: 3.25rem;  border-radius: 0.25rem;  border: 1px solid var(--gray-4);  background: var(--white);  display: flex;  align-items: center;  padding-left: 0.75rem;  font-size: 1rem;}
 .select2-container--default .select2-selection--single .select2-selection__rendered {  color: var(--gray-9);  line-height: 2.25rem;}
 .select2-container--default .select2-selection--single .select2-selection__arrow {  height: 100%;  right: 0.75rem;}
 .select2-container--default .select2-container--focus .select2-selection--single {  border-color: var(--blue-5);  box-shadow: 0 0 0 2px var(--blue-3);}
-.form-group-option, .form-group-radio, .form-group-check, .form-group-switch {  display: flex;  align-items: center;  margin-bottom: 1rem;  position: relative;}
-.form-option, .form-radio, .form-check, .form-switch {  position: relative;  margin-right: 0.75rem;  accent-color: var(--blue-5);  width: 1.25rem;  height: 1.25rem;  cursor: pointer;}
-.form-label-option, .form-label-radio, .form-label-check, .form-label-switch {  font-size: 1rem;  color: var(--gray-8);  cursor: pointer;  user-select: none;}
-.form-radio {  border-radius: 50%;}
-.form-radio:focus {  outline: 2px solid var(--blue-5);  outline-offset: 2px;}
-.form-check {  border-radius: 0.25rem;}
-.form-check:focus {  outline: 2px solid var(--blue-5);  outline-offset: 2px;}
-.form-switch {  width: 2.5rem;  height: 1.25rem;  border-radius: 1.25rem;  background: var(--gray-4);  position: relative;  appearance: none;  outline: none;  transition: background 0.2s;}
-.form-switch:checked {  background: var(--blue-5);}
-.form-switch::before {  content: '';  position: absolute;  top: 0.125rem;  left: 0.125rem;  width: 1rem;  height: 1rem;  background: var(--white);  border-radius: 50%;  transition: transform 0.2s;  box-shadow: 0 1px 2px rgba(0,0,0,0.08);}
-.form-switch:checked::before {  transform: translateX(1.25rem);}
-.form-switch:focus {  box-shadow: 0 0 0 2px var(--blue-3);}
-.form-file {position: relative; display: flex; align-items: center; width: 100%; max-width: 100%; margin-bottom: 1rem;}
-.form-file input[type="file"] {position: absolute; left: 0; top: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; z-index: 2;}
-.form-file-label { display: flex; align-items: center; padding: 0.5em 1.25em; background: var(--gray-2); color: var(--gray-8); border: 1.5px solid var(--gray-4); border-radius: 0.375em; font-size: 1em; font-weight: 500; cursor: pointer; transition: background 0.15s, color 0.15s, border 0.15s; z-index: 1; min-width: 120px;}
-.form-file input[type="file"]:focus + .form-file-label, .form-file input[type="file"]:hover + .form-file-label { background: var(--blue-1); border-color: var(--blue-4); color: var(--blue-8);}
-.form-file-label.selected { background: var(--green-1); border-color: var(--green-4); color: var(--green-8);}
-.form-file-filename { margin-left: 1em; color: var(--gray-7); font-size: 0.97em; font-style: italic; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 60%;}
-.is-invalid, .form-input.is-invalid, .form-select.is-invalid, .form-file input[type="file"].is-invalid {  border-color: var(--red-6) !important;  background-color: var(--red-1) !important;  color: var(--red-7) !important;  box-shadow: 0 0 0 2px var(--red-2);}
-.form-input.is-invalid:focus, .form-select.is-invalid:focus {  border-color: var(--red-6) !important;  box-shadow: 0 0 0 2px var(--red-3);}
-.form-label.is-invalid, .form-label-select.is-invalid {  color: var(--red-6) !important;}
-.form-group.is-invalid .form-label,.form-group.is-invalid .form-label-select {  color: var(--red-6) !important;}
-.invalid-feedback, .form-error {  display: block;  color: var(--red-6);  font-size: 0.97em;  margin-top: 0.35em;  font-weight: 500;  line-height: 1.3;}
+.f-group-option, .f-group-radio, .f-group-check, .f-group-switch {  display: flex;  align-items: center;  margin-bottom: 1rem;  position: relative;}
+.f-option, .f-radio, .f-check, .f-switch {  position: relative;  margin-right: 0.75rem;  accent-color: var(--blue-5);  width: 1.25rem;  height: 1.25rem;  cursor: pointer;}
+.f-label-option, .f-label-radio, .f-label-check, .f-label-switch {  font-size: 1rem;  color: var(--gray-8);  cursor: pointer;  user-select: none;}
+.f-radio {  border-radius: 50%;}
+.f-radio:focus {  outline: 2px solid var(--blue-5);  outline-offset: 2px;}
+.f-check {  border-radius: 0.25rem;}
+.f-check:focus {  outline: 2px solid var(--blue-5);  outline-offset: 2px;}
+.f-switch {  width: 2.5rem;  height: 1.25rem;  border-radius: 1.25rem;  background: var(--gray-4);  position: relative;  appearance: none;  outline: none;  transition: background 0.2s;}
+.f-switch:checked {  background: var(--blue-5);}
+.f-switch::before {  content: '';  position: absolute;  top: 0.125rem;  left: 0.125rem;  width: 1rem;  height: 1rem;  background: var(--white);  border-radius: 50%;  transition: transform 0.2s;  box-shadow: 0 1px 2px rgba(0,0,0,0.08);}
+.f-switch:checked::before {  transform: translateX(1.25rem);}
+.f-switch:focus {  box-shadow: 0 0 0 2px var(--blue-3);}
+.f-file {position: relative; display: flex; align-items: center; width: 100%; max-width: 100%; margin-bottom: 1rem;}
+.f-file input[type="file"] {position: absolute; left: 0; top: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; z-index: 2;}
+.f-file-label { display: flex; align-items: center; padding: 0.5em 1.25em; background: var(--gray-2); color: var(--gray-8); border: 1.5px solid var(--gray-4); border-radius: 0.375em; font-size: 1em; font-weight: 500; cursor: pointer; transition: background 0.15s, color 0.15s, border 0.15s; z-index: 1; min-width: 120px;}
+.f-file input[type="file"]:focus + .f-file-label, .f-file input[type="file"]:hover + .f-file-label { background: var(--blue-1); border-color: var(--blue-4); color: var(--blue-8);}
+.f-file-label.selected { background: var(--green-1); border-color: var(--green-4); color: var(--green-8);}
+.f-file-filename { margin-left: 1em; color: var(--gray-7); font-size: 0.97em; font-style: italic; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 60%;}
+.is-invalid, .f-input.is-invalid, .f-select.is-invalid, .f-file input[type="file"].is-invalid {  border-color: var(--red-6) !important;  background-color: var(--red-1) !important;  color: var(--red-7) !important;  box-shadow: 0 0 0 2px var(--red-2);}
+.f-input.is-invalid:focus, .f-select.is-invalid:focus {  border-color: var(--red-6) !important;  box-shadow: 0 0 0 2px var(--red-3);}
+.f-label.is-invalid, .f-label-select.is-invalid {  color: var(--red-6) !important;}
+.f-group.is-invalid .f-label,.f-group.is-invalid .f-label-select {  color: var(--red-6) !important;}
+.invalid-feedback, .f-error {  display: block;  color: var(--red-6);  font-size: 0.97em;  margin-top: 0.35em;  font-weight: 500;  line-height: 1.3;}
 
 
 /* ========================================================================
@@ -952,7 +973,7 @@ img.img-fit, .img-fit {  width: 100%;  height: auto;  object-fit: cover;  displa
     a, a:visited { color: #000 !important; text-decoration: underline !important; }
     img, svg, video { filter: none !important; box-shadow: none !important; }
     [class*="bg-"], [class*="text-"] {    background: #fff !important;    color: #000 !important;  }
-    .btn, .badge, .pill, .alert, .dropdown-menu, .navbar, .sidebar, .dialog, .modal, .card, .table, .tab, .tab-content, .pg-bar, .tooltip, .popover, .form-input, .form-select, .form-file-label, .form-label, .form-label-select, .form-group, .form-error, .invalid-feedback {    background: #fff !important;    color: #000 !important;    border-color: #000 !important;    box-shadow: none !important;  }
+    .btn, .badge, .pill, .alert, .dropdown-menu, .navbar, .sidebar, .dialog, .modal, .cd, .table, .tab, .tab-content, .pg-bar, .tooltip, .popover, .f-input, .f-select, .f-file-label, .f-label, .f-label-select, .f-group, .f-error, .invalid-feedback {    background: #fff !important;    color: #000 !important;    border-color: #000 !important;    box-shadow: none !important;  }
     .shadow1, .shadow2, .shadow3, .shadow4, .shadow5, .t-shadow1, .t-shadow2, .t-shadow3, .t-shadow4, .t-shadow5 {    box-shadow: none !important;    text-shadow: none !important;  }
     .e-g-1, .e-g-2, .e-g-3, .e-g-4, .e-g-5, .e-s-1, .e-s-2, .e-s-3, .e-s-4, .e-s-5, .e-o-1, .e-o-2, .e-o-3, .e-o-4, .e-o-5 {    filter: none !important;    opacity: 1 !important;  }
     .d-n, .navbar, .sidebar, .dropdown-menu, .tooltip, .popover, .alert-bar, .alert-fixed-br, .alert-fixed-tr, .dialog-bg, .modal-bg, .sidebar-dim {    display: none !important;  }
