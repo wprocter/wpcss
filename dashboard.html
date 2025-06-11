@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LMS Dashboard Demo - wpcss</title>
+  <link rel="stylesheet" href="wpcss.css">
+</head>
+<body class="bg-gray-1">
+    <div class="container-fluid p-0">
+  <div class="row" style="min-height: 100vh;">
+    <!-- Sidebar -->
+    <aside class="col-3 bg-gray-8 t-white d-f p-0" style=" flex-direction: column; padding: 0;">
+      <div class="text-center p-3 bg-gray-9 fw-700 fs-2 letter-spacing-1">LMS</div>
+      <nav class="flex-1">
+        <ul class="list-unstyled m-0 p-0">
+          <li><a href="#" class="d-block px-4 py-3 t-white bg-gray-7 br2 mb-1">🏠 Dashboard</a></li>
+          <li><a href="#" class="d-block px-4 py-3 t-white br2 mb-1">📚 Courses</a></li>
+          <li><a href="#" class="d-block px-4 py-3 t-white br2 mb-1">📝 Assignments</a></li>
+          <li><a href="#" class="d-block px-4 py-3 t-white br2 mb-1">📊 Grades</a></li>
+          <li><a href="#" class="d-block px-4 py-3 t-white br2 mb-1">💬 Messages</a></li>
+          <li><a href="#" class="d-block px-4 py-3 t-white br2 mb-1">⚙️ Settings</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <!-- Main Content -->
+    <main class="col-12">
+      <header class="row align-items-center bg-white b-b-gray-3 py-3 px-4 mb-3">
+        <div class="col"><strong>Dashboard</strong></div>
+        <div class="col text-end d-flex align-items-center justify-content-end gap-2">
+          <span class="br-circle bg-gray-2 t-gray-7 d-inline-flex align-items-center justify-content-center" style="width:36px; height:36px; font-weight:600;">NR</span>
+          <span>Niki Riggs</span>
+        </div>
+      </header>
+      <div class="container">
+        <div class="mt-4 mb-3">
+          <h2>Welcome back, Niki!</h2>
+          <p class="t-gray-7">Here's a quick overview of your learning progress.</p>
+        </div>
+        <div class="row mb-4">
+          <div class="col">
+            <div class="card text-center">
+              <div class="card-body">
+                <h3 class="m-0">5</h3>
+                <p class="t-gray-7">Active Courses</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card text-center">
+              <div class="card-body">
+                <h3 class="m-0">2</h3>
+                <p class="t-gray-7">Assignments Due</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card text-center">
+              <div class="card-body">
+                <h3 class="m-0">88%</h3>
+                <p class="t-gray-7">Average Grade</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card text-center">
+              <div class="card-body">
+                <h3 class="m-0">3</h3>
+                <p class="t-gray-7">Unread Messages</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="card mb-3">
+              <div class="card-header">Upcoming Assignments</div>
+              <div class="card-body">
+                <ul class="m-0">
+                  <li>Essay: Modern History <span class="t-gray-6">(Due: 12 Jun)</span></li>
+                  <li>Quiz: Algebra II <span class="t-gray-6">(Due: 14 Jun)</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-3">
+              <div class="card-header">Recent Grades</div>
+              <div class="card-body">
+                <ul class="m-0">
+                  <li>Biology Lab: <span class="t-green-6">A</span></li>
+                  <li>English Essay: <span class="t-yellow-7">B+</span></li>
+                  <li>Math Quiz: <span class="t-red-6">C</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
