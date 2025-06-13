@@ -57,6 +57,31 @@
   &lt;div class="col-4 bg-blue-4 p2 t-c"&gt;.col-4&lt;/div&gt;
 &lt;/div&gt;</div>
       </section>
+      <section class="doc-section" id="display">
+        <h2>Responsive Display Utilities</h2>
+        <p>Show or hide elements responsively using <code>.d-none</code>, <code>.d-block</code>, <code>.d-sm-block</code>, <code>.d-md-none</code>, etc. These work like Bootstrap’s display utilities. Combine classes for precise control:</p>
+        <ul>
+          <li><code>.d-none</code>: Hidden on all breakpoints</li>
+          <li><code>.d-block</code>: Visible on all breakpoints</li>
+          <li><code>.d-none .d-sm-block</code>: Hidden only on xs, visible on sm and up</li>
+          <li><code>.d-sm-none .d-md-block</code>: Hidden only on sm, visible on md and up</li>
+          <li><code>.d-none .d-md-block .d-lg-none</code>: Visible only on md</li>
+        </ul>
+        <div class="doc-example" style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: flex-end;">
+          <div class="d-block d-sm-none bg-blue-2 t-c p2" style="min-width:120px;">xs only</div>
+          <div class="d-none d-sm-block d-md-none bg-green-2 t-c p2" style="min-width:120px;">sm only</div>
+          <div class="d-none d-md-block d-lg-none bg-yellow-2 t-c p2" style="min-width:120px;">md only</div>
+          <div class="d-none d-lg-block d-xl-none bg-orange-2 t-c p2" style="min-width:120px;">lg only</div>
+          <div class="d-none d-xl-block d-xxl-none bg-pink-2 t-c p2" style="min-width:120px;">xl only</div>
+          <div class="d-none d-xxl-block bg-purple-2 t-c p2" style="min-width:120px;">xxl only</div>
+        </div>
+        <div class="doc-code">&lt;div class="d-block d-sm-none"&gt;xs only&lt;/div&gt;
+&lt;div class="d-none d-sm-block d-md-none"&gt;sm only&lt;/div&gt;
+&lt;div class="d-none d-md-block d-lg-none"&gt;md only&lt;/div&gt;
+&lt;div class="d-none d-lg-block d-xl-none"&gt;lg only&lt;/div&gt;
+&lt;div class="d-none d-xl-block d-xxl-none"&gt;xl only&lt;/div&gt;
+&lt;div class="d-none d-xxl-block"&gt;xxl only&lt;/div&gt;</div>
+      </section>
       <section class="doc-section" id="spacing">
         <h2>Spacing Utilities</h2>
         <p>Margin and padding classes: <code>.m1</code>, <code>.mt2</code>, <code>.p3</code>, <code>.pl4</code>, etc.</p>
@@ -89,48 +114,60 @@
       </section>
       <section class="doc-section" id="buttons">
         <h2>Buttons</h2>
-        <p>Button classes: <code>.btn</code> and color variants like <code>.btn-blue-4</code>, <code>.btn-green-5</code>.</p>
-        <div class="doc-example">
-          <button class="btn btn-blue-4">Blue Button</button>
-          <button class="btn btn-green-5">Green Button</button>
-          <button class="btn btn-red-5">Red Button</button>
+        <p><strong>Recommended:</strong> Use <code>.btn</code> with <code>.bg-*</code> and <code>.t-*</code> utility classes for flexible, accessible button colors.<br>
+        <strong>Alternative:</strong> Use predefined color button classes like <code>.btn-blue-4</code> for convenience.</p>
+        <div class="doc-example" style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <!-- Utility-first buttons -->
+          <button class="btn bg-blue-4 t-white">Utility Blue</button>
+          <button class="btn bg-green-5 t-white">Utility Green</button>
+          <button class="btn bg-red-5 t-white">Utility Red</button>
+          <!-- Predefined color buttons -->
+          <button class="btn btn-blue-4">.btn-blue-4</button>
+          <button class="btn btn-green-5">.btn-green-5</button>
+          <button class="btn btn-red-5">.btn-red-5</button>
         </div>
-        <div class="doc-code">&lt;button class="btn btn-blue-4"&gt;Blue Button&lt;/button&gt;
-&lt;button class="btn btn-green-5"&gt;Green Button&lt;/button&gt;
-&lt;button class="btn btn-red-5"&gt;Red Button&lt;/button&gt;</div>
+        <div class="doc-code">&lt;!-- Utility-first approach --&gt;
+&lt;button class="btn bg-blue-4 t-white"&gt;Utility Blue&lt;/button&gt;
+&lt;button class="btn bg-green-5 t-white"&gt;Utility Green&lt;/button&gt;
+&lt;button class="btn bg-red-5 t-white"&gt;Utility Red&lt;/button&gt;
+
+&lt;!-- Predefined color classes (for convenience) --&gt;
+&lt;button class="btn btn-blue-4"&gt;.btn-blue-4&lt;/button&gt;
+&lt;button class="btn btn-green-5"&gt;.btn-green-5&lt;/button&gt;
+&lt;button class="btn btn-red-5"&gt;.btn-red-5&lt;/button&gt;</div>
       </section>
       <section class="doc-section" id="forms">
         <h2>Forms</h2>
         <p>Form controls and validation states.</p>
         <div class="doc-example">
           <form>
-            <div class="form-group">
-              <input type="text" class="form-input" placeholder=" " id="demoInput">
-              <label class="form-label" for="demoInput">Text Input</label>
+            <div class="f-group">
+              <input type="text" class="f-input" placeholder=" " id="demoInput">
+              <label class="f-label" for="demoInput">Text Input</label>
             </div>
-            <div class="form-group">
-              <select class="form-select" id="demoSelect">
+            <div class="f-group">
+              <select class="f-select" id="demoSelect">
                 <option value="">Choose...</option>
                 <option>Option 1</option>
                 <option>Option 2</option>
               </select>
-              <label class="form-label-select" for="demoSelect">Select</label>
+              <label class="f-label-select" for="demoSelect">Select</label>
             </div>
             <button class="btn btn-blue-5" type="submit">Submit</button>
           </form>
         </div>
         <div class="doc-code">&lt;form&gt;
-  &lt;div class="form-group"&gt;
-    &lt;input type="text" class="form-input" placeholder=" " id="demoInput"&gt;
-    &lt;label class="form-label" for="demoInput"&gt;Text Input&lt;/label&gt;
+  &lt;div class="f-group"&gt;
+    &lt;input type="text" class="f-input" placeholder=" " id="demoInput"&gt;
+    &lt;label class="f-label" for="demoInput"&gt;Text Input&lt;/label&gt;
   &lt;/div&gt;
-  &lt;div class="form-group"&gt;
-    &lt;select class="form-select" id="demoSelect"&gt;
+  &lt;div class="f-group"&gt;
+    &lt;select class="f-select" id="demoSelect"&gt;
       &lt;option value=""&gt;Choose...&lt;/option&gt;
       &lt;option&gt;Option 1&lt;/option&gt;
       &lt;option&gt;Option 2&lt;/option&gt;
     &lt;/select&gt;
-    &lt;label class="form-label-select" for="demoSelect"&gt;Select&lt;/label&gt;
+    &lt;label class="f-label-select" for="demoSelect"&gt;Select&lt;/label&gt;
   &lt;/div&gt;
   &lt;button class="btn btn-blue-5" type="submit"&gt;Submit&lt;/button&gt;
 &lt;/form&gt;</div>
@@ -140,19 +177,19 @@
         <p>Reusable UI components like alerts, cards, navbar, sidebar, modal, etc.</p>
         <div class="doc-example">
           <div class="alert alert-info">This is an info alert!</div>
-          <div class="card" style="max-width: 320px;">
-            <div class="card-header">Card Header</div>
-            <div class="card-body">Card body content goes here.</div>
-            <div class="card-footer">Card Footer</div>
+          <div class="cd" style="max-width: 320px;">
+            <div class="cd-header">cd Header</div>
+            <div class="cd-body">cd body content goes here.</div>
+            <div class="cd-footer">cd Footer</div>
           </div>
           <!-- Dialog Example -->
           <button class="btn btn-blue-4" onclick="document.getElementById('demoDialogBg').style.display='flex'">Open Dialog</button>
-          <div class="wp-dialog-bg" id="demoDialogBg" style="display:none;">
-            <div class="wp-dialog" tabindex="-1">
-              <button class="wp-dialog-close" onclick="document.getElementById('demoDialogBg').style.display='none'">&times;</button>
-              <div class="wp-dialog-header">Dialog Title</div>
-              <div class="wp-dialog-content">This is a dialog box using <code>.wp-dialog</code>.</div>
-              <div class="wp-dialog-footer">
+          <div class="dialog-bg" id="demoDialogBg" style="display:none;">
+            <div class="dialog" tabindex="-1">
+              <button class="dialog-close" onclick="document.getElementById('demoDialogBg').style.display='none'">&times;</button>
+              <div class="dialog-header">Dialog Title</div>
+              <div class="dialog-content">This is a dialog box using <code>.dialog</code>.</div>
+              <div class="dialog-footer">
                 <button class="btn btn-gray-3" onclick="document.getElementById('demoDialogBg').style.display='none'">Cancel</button>
                 <button class="btn btn-blue-5" onclick="document.getElementById('demoDialogBg').style.display='none'">OK</button>
               </div>
@@ -160,32 +197,32 @@
           </div>
           <!-- Modal Example -->
           <button class="btn btn-green-5" onclick="document.getElementById('demoModalBg').style.display='flex'">Open Modal</button>
-          <div class="wp-modal-bg" id="demoModalBg" style="display:none;">
-            <div class="wp-modal" tabindex="-1">
-              <button class="wp-modal-close" onclick="document.getElementById('demoModalBg').style.display='none'">&times;</button>
-              <div class="wp-dialog-header">Modal Title</div>
-              <div class="wp-dialog-content">This is a modal using <code>.wp-modal</code>.</div>
-              <div class="wp-dialog-footer">
+          <div class="modal-bg" id="demoModalBg" style="display:none;">
+            <div class="modal" tabindex="-1">
+              <button class="modal-close" onclick="document.getElementById('demoModalBg').style.display='none'">&times;</button>
+              <div class="dialog-header">Modal Title</div>
+              <div class="dialog-content">This is a modal using <code>.modal</code>.</div>
+              <div class="dialog-footer">
                 <button class="btn btn-gray-3" onclick="document.getElementById('demoModalBg').style.display='none'">Close</button>
               </div>
             </div>
           </div>
         </div>
         <div class="doc-code">&lt;div class="alert alert-info"&gt;This is an info alert!&lt;/div&gt;
-&lt;div class="card"&gt;
-  &lt;div class="card-header"&gt;Card Header&lt;/div&gt;
-  &lt;div class="card-body"&gt;Card body content goes here.&lt;/div&gt;
-  &lt;div class="card-footer"&gt;Card Footer&lt;/div&gt;
+&lt;div class="cd"&gt;
+  &lt;div class="cd-header"&gt;cd Header&lt;/div&gt;
+  &lt;div class="cd-body"&gt;cd body content goes here.&lt;/div&gt;
+  &lt;div class="cd-footer"&gt;cd Footer&lt;/div&gt;
 &lt;/div&gt;</div>
         <div class="doc-code" style="margin-top:1.5rem;">
 &lt;!-- Dialog Example --&gt;
 &lt;button class="btn btn-blue-4" onclick="document.getElementById('demoDialogBg').style.display='flex'"&gt;Open Dialog&lt;/button&gt;
-&lt;div class="wp-dialog-bg" id="demoDialogBg" style="display:none;"&gt;
-  &lt;div class="wp-dialog" tabindex="-1"&gt;
-    &lt;button class="wp-dialog-close" onclick="document.getElementById('demoDialogBg').style.display='none'"&gt;&amp;times;&lt;/button&gt;
-    &lt;div class="wp-dialog-header"&gt;Dialog Title&lt;/div&gt;
-    &lt;div class="wp-dialog-content"&gt;This is a dialog box using &lt;code&gt;.wp-dialog&lt;/code&gt;.&lt;/div&gt;
-    &lt;div class="wp-dialog-footer"&gt;
+&lt;div class="dialog-bg" id="demoDialogBg" style="display:none;"&gt;
+  &lt;div class="dialog" tabindex="-1"&gt;
+    &lt;button class="dialog-close" onclick="document.getElementById('demoDialogBg').style.display='none'"&gt;&amp;times;&lt;/button&gt;
+    &lt;div class="dialog-header"&gt;Dialog Title&lt;/div&gt;
+    &lt;div class="dialog-content"&gt;This is a dialog box using &lt;code&gt;.dialog&lt;/code&gt;.&lt;/div&gt;
+    &lt;div class="dialog-footer"&gt;
       &lt;button class="btn btn-gray-3" onclick="document.getElementById('demoDialogBg').style.display='none'"&gt;Cancel&lt;/button&gt;
       &lt;button class="btn btn-blue-5" onclick="document.getElementById('demoDialogBg').style.display='none'"&gt;OK&lt;/button&gt;
     &lt;/div&gt;
@@ -194,12 +231,12 @@
 
 &lt;!-- Modal Example --&gt;
 &lt;button class="btn btn-green-5" onclick="document.getElementById('demoModalBg').style.display='flex'"&gt;Open Modal&lt;/button&gt;
-&lt;div class="wp-modal-bg" id="demoModalBg" style="display:none;"&gt;
-  &lt;div class="wp-modal" tabindex="-1"&gt;
-    &lt;button class="wp-modal-close" onclick="document.getElementById('demoModalBg').style.display='none'"&gt;&amp;times;&lt;/button&gt;
-    &lt;div class="wp-dialog-header"&gt;Modal Title&lt;/div&gt;
-    &lt;div class="wp-dialog-content"&gt;This is a modal using &lt;code&gt;.wp-modal&lt;/code&gt;.&lt;/div&gt;
-    &lt;div class="wp-dialog-footer"&gt;
+&lt;div class="modal-bg" id="demoModalBg" style="display:none;"&gt;
+  &lt;div class="modal" tabindex="-1"&gt;
+    &lt;button class="modal-close" onclick="document.getElementById('demoModalBg').style.display='none'"&gt;&amp;times;&lt;/button&gt;
+    &lt;div class="dialog-header"&gt;Modal Title&lt;/div&gt;
+    &lt;div class="dialog-content"&gt;This is a modal using &lt;code&gt;.modal&lt;/code&gt;.&lt;/div&gt;
+    &lt;div class="dialog-footer"&gt;
       &lt;button class="btn btn-gray-3" onclick="document.getElementById('demoModalBg').style.display='none'"&gt;Close&lt;/button&gt;
     &lt;/div&gt;
   &lt;/div&gt;
