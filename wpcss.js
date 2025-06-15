@@ -221,7 +221,7 @@ window.wpAlert = {
   }
 };
 // Sidebar off-canvas toggle helper
-window.wpSidebarToggle = function(sidebarSelector = '.wp-sidebar', dimClass = 'wp-sidebar-dim') {
+window.SidebarToggle = function(sidebarSelector = '.sidebar', dimClass = 'sidebar-dim') {
   const sidebar = document.querySelector(sidebarSelector);
   if (!sidebar) return;
   // Only for small screens
@@ -238,10 +238,10 @@ window.wpSidebarToggle = function(sidebarSelector = '.wp-sidebar', dimClass = 'w
     if (dim) dim.remove();
   }
   // Expose for manual use
-  sidebar.wpOpenSidebar = openSidebar;
-  sidebar.wpCloseSidebar = closeSidebar;
+  sidebar.OpenSidebar = openSidebar;
+  sidebar.CloseSidebar = closeSidebar;
   // Optionally, add triggers (e.g., a button with data-wp-sidebar-toggle)
-  document.querySelectorAll('[data-wp-sidebar-toggle]').forEach(btn => {
+  document.querySelectorAll('[data-sidebar-toggle]').forEach(btn => {
     btn.onclick = openSidebar;
   });
   // Close on resize if needed

@@ -7,111 +7,115 @@
   <link rel="stylesheet" href="wpcss.css">
 </head>
 <body class="bg-gray-2">
-  <div class="container-full p0 m0">
-  <!-- Navbar -->
-  <nav class="navbar bg-white d-l-n vw-100">
-    <div class="d-f ai-c">
-      <!-- Hamburger for mobile -->
-      <button id="sidebarToggle" class="d-ib btn btn-icon bg-gray-2 t-gray-8 br2 p-2 me-2" aria-label="Open sidebar" aria-controls="dashboardSidebar" aria-expanded="false" style="border:none;">
-        <span class="t-1">&#9776;</span>
-      </button>
-      <span class="fw-700 fs-2 letter-spacing-1 t-gray-9">LMS</span>
-    </div>
-    <div class="d-f ai-c gap-2">
-      <span class="br-circle bg-gray-2 t-gray-7 d-inline-flex ai-c jc-c" style="width:36px; height:36px; font-weight:600;">NR</span>
-      <span class="d-n d-m-ib">Niki Riggs</span>
-    </div>
-  </nav>
-
-  <!-- Sidebar (off-canvas on mobile) -->
-  <aside class="sidebar bg-gray-8 t-white " id="dashboardSidebar">
-    <div class="sidebar-header">
-      LMS
-      <button class="sidebar-close" aria-label="Close sidebar">&times;</button>
-    </div>
-    <nav class="sidebar-main">
-      <ul class="sidebar-nav">
-        <li><a href="#" class="d-b p4 py-3 t-white bg-gray-7 br2 mb-1">🏠 Dashboard</a></li>
-        <li><a href="#" class="d-b p4 py-3 t-white br2 mb-1">📚 Courses</a></li>
-        <li><a href="#" class="d-b p4 py-3 t-white br2 mb-1">📝 Assignments</a></li>
-        <li><a href="#" class="d-b p4 py-3 t-white br2 mb-1">📊 Grades</a></li>
-        <li><a href="#" class="d-b p4 py-3 t-white br2 mb-1">💬 Messages</a></li>
-        <li><a href="#" class="d-b p4 py-3 t-white br2 mb-1">⚙️ Settings</a></li>
-      </ul>
+  <div class="container-full m0">
+    <!-- Navbar -->
+    <nav class="navbar bg-white d-l-n d-xl-n vw-100">
+      <div class="d-f ai-c">
+        <!-- Hamburger for mobile -->
+        <button id="sidebarToggle" class="d-ib btn btn-icon bg-gray-2 t-gray-8 br2 p-2 me-2" aria-label="Open sidebar" aria-controls="dashboardSidebar" aria-expanded="false" style="border:none;">
+          <span class="t-1">&#9776;</span>
+        </button>
+        <span class="fw-700 fs-2 letter-spacing-1 t-gray-9">LMS</span>
+      </div>
+      <div class="d-f ai-c gap-2">
+        <span class="br-circle bg-gray-2 t-gray-7 d-inline-flex ai-c jc-c" style="width:36px; height:36px; font-weight:600;">NR</span>
+        <span class="d-n d-m-ib">Niki Riggs</span>
+      </div>
     </nav>
-  </aside>
+    
+    <!-- Content Wrapper -->
+    <div class="row d-f">
+      <!-- Sidebar (off-canvas on mobile) -->
+      <aside class="sidebar bg-gray-3 t-white d-xs-n d-s-n d-m-n d-l-b d-xl-b col-2" id="dashboardSidebar">
+        <div class="sidebar-header bg-blue-6 t-orange-4"><strong>
+          LMS</strong>
+          <button class="sidebar-close d-xs-b d-s-b d-m-b d-l-n d-xl-n" aria-label="Close sidebar">&times;</button>
+        </div>
+        <nav class="sidebar-main bg-gray-3">
+          <ul class="sidebar-nav">
+            <li><a href="#" class="d-b p4 py-3 t-gray-8 br2 mb-1">🏠 Dashboard</a></li>
+            <li><a href="#" class="d-b p4 py-3 t-white br2 mb-1">📚 Courses</a></li>
+            <li><a href="#" class="d-b p4 py-3 t-white br2 mb-1">📝 Assignments</a></li>
+            <li><a href="#" class="d-b p4 py-3 t-white br2 mb-1">📊 Grades</a></li>
+            <li><a href="#" class="d-b p4 py-3 t-white br2 mb-1">💬 Messages</a></li>
+            <li><a href="#" class="d-b p4 py-3 t-white br2 mb-1">⚙️ Settings</a></li>
+          </ul>
+        </nav>
+      </aside>
 
-  <!-- Main Content -->
-  <!-- Overlay for mobile sidebar -->
-  <div id="sidebarOverlay" class="sidebar-dim d-n"></div>
-  <main class="container-full main-content">
-    <div class="container bg-white m0">
-      <div class="">
-        <h2>Welcome back, Niki!</h2>
-        <p class="t-gray-7">Here's a quick overview of your learning progress.</p>
-      </div>
-      <div class="row mb-4">
-        <div class="col">
-          <div class="cd text-center">
-            <div class="cd-body">
-              <h3 class="m-0">5</h3>
-              <p class="t-gray-7">Active Courses</p>
+      <!-- Overlay for mobile sidebar -->
+      <div id="sidebarOverlay" class="sidebar-dim d-n"></div>
+
+      <!-- Main Content -->
+      <main class="col-15 col-l-13 col-xl-13 main-content">
+        <div class="container bg-white m0">
+          <div class="">
+            <h2>Welcome back, Niki!</h2>
+            <p class="t-gray-7">Here's a quick overview of your learning progress.</p>
+          </div>
+          <div class="row mb-4">
+            <div class="col">
+              <div class="cd text-center">
+                <div class="cd-body">
+                  <h3 class="m-0">5</h3>
+                  <p class="t-gray-7">Active Courses</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="cd text-center">
+                <div class="cd-body">
+                  <h3 class="m-0">2</h3>
+                  <p class="t-gray-7">Assignments Due</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="cd text-center">
+                <div class="cd-body">
+                  <h3 class="m-0">88%</h3>
+                  <p class="t-gray-7">Average Grade</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="cd text-center">
+                <div class="cd-body">
+                  <h3 class="m-0">3</h3>
+                  <p class="t-gray-7">Unread Messages</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="cd mb-3">
+                <div class="cd-header">Upcoming Assignments</div>
+                <div class="cd-body">
+                  <ul class="m-0">
+                    <li>Essay: Modern History <span class="t-gray-6">(Due: 12 Jun)</span></li>
+                    <li>Quiz: Algebra II <span class="t-gray-6">(Due: 14 Jun)</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="cd mb-3">
+                <div class="cd-header">Recent Grades</div>
+                <div class="cd-body">
+                  <ul class="m-0">
+                    <li>Biology Lab: <span class="t-green-6">A</span></li>
+                    <li>English Essay: <span class="t-yellow-7">B+</span></li>
+                    <li>Math Quiz: <span class="t-red-6">C</span></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="cd text-center">
-            <div class="cd-body">
-              <h3 class="m-0">2</h3>
-              <p class="t-gray-7">Assignments Due</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="cd text-center">
-            <div class="cd-body">
-              <h3 class="m-0">88%</h3>
-              <p class="t-gray-7">Average Grade</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="cd text-center">
-            <div class="cd-body">
-              <h3 class="m-0">3</h3>
-              <p class="t-gray-7">Unread Messages</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <div class="cd mb-3">
-            <div class="cd-header">Upcoming Assignments</div>
-            <div class="cd-body">
-              <ul class="m-0">
-                <li>Essay: Modern History <span class="t-gray-6">(Due: 12 Jun)</span></li>
-                <li>Quiz: Algebra II <span class="t-gray-6">(Due: 14 Jun)</span></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="cd mb-3">
-            <div class="cd-header">Recent Grades</div>
-            <div class="cd-body">
-              <ul class="m-0">
-                <li>Biology Lab: <span class="t-green-6">A</span></li>
-                <li>English Essay: <span class="t-yellow-7">B+</span></li>
-                <li>Math Quiz: <span class="t-red-6">C</span></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+      </main>
     </div>
-  </main>
-</div>
+  </div>
 
   <script src="wpcss.js"></script>
   <script>
