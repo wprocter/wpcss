@@ -736,7 +736,7 @@ img.img-fit, .img-fit {  width: 100%;  height: auto;  object-fit: cover;  displa
 .ai-l { align-items: left !important; } .ai-c { align-items: center !important; } .ai-r { align-items: right !important; }
 .jc-l { justify-content: left !important; } .jc-c { justify-content: center !important; } .jc-r { justify-content: right !important; } .jcs { justify-content: space-between !important; } .jca { justify-content: space-around !important; } .jcf { justify-content: flex-start !important; } .jce { justify-content: flex-end !important; }
 .fd-c{ flex-direction: column !important; } .fd-r { flex-direction: row !important; } .fd-cr { flex-direction: column-reverse !important; } .fd-rr{ flex-direction: row-reverse !important; }
-
+.flex-1 { flex: 1 1 auto !important; }
 
 /* ========================================================================
    Badges and Pills
@@ -849,7 +849,7 @@ img.img-fit, .img-fit {  width: 100%;  height: auto;  object-fit: cover;  displa
      .sidebar {    position: fixed;    top: 0;    /*left: -75vw;    width: 60vw !important;    min-width: 0;    max-width: 75vw;    height: 100vh;    z-index: 1200;    box-shadow: 2px 0 16px rgba(0,0,0,0.12);    transition: left 0.25s cubic-bezier(0.4,0,0.2,1);    display: block;  }
 .sidebar.open {left: 0;  }
 .sidebar-dim {content: '';    position: fixed;    top: 0; left: 0; right: 0; bottom: 0;    background: rgba(0,0,0,0.25);    z-index: 1199;    display: block;    transition: opacity 0.18s;  }}
-@media (min-width: 768px) {  .sidebar {    position: relative;    left: 0;    height: 100vh;    box-shadow: none;    display: flex;  }  .sidebar-dim {    display: none !important;  }}
+@media (min-width: 768px) {  .sidebar {    position: fixed;    top: 0; left: 0;    height: 100vh;    width: 16.6667%;    box-shadow: none;    display: flex;  }  .sidebar-dim {    display: none !important;  }}
 */
 .sidebar-header {  padding: 1.5rem;  border-bottom: 1px solid var(--gray-3);  display: flex;  align-items: center;  justify-content: space-between;  font-size: 1.25rem;  font-weight: 600;  color: var(--gray-9);}
 .sidebar-header .sidebar-close {  background: none;  border: none;  font-size: 1.5rem;  color: var(--gray-6);  cursor: pointer;  transition: color 0.15s;}
@@ -857,10 +857,13 @@ img.img-fit, .img-fit {  width: 100%;  height: auto;  object-fit: cover;  displa
 .sidebar-nav {  list-style: none;  margin: 0;  padding: 0;  flex-grow: 1;  overflow-y: auto;  display: flex;  flex-direction: column;}
 .sidebar-main {flex: 1 1 0%;}
 @media (min-width: 768px) {
-  .sidebar {    position: fixed;    left: 0;    height: 100vh;    box-shadow: none;    display: flex;  }
+  .sidebar {    position: fixed;    top: 0; left: 0;    height: 100vh;    width: 16.6667%;    box-shadow: none;    display: flex;  }
   .sidebar-dim {    display: none !important;  }
-  /* Shift main content to the right of sidebar on desktop */
-  .main-content { position: relative;}
+  /* Shift main content to the right of sidebar on medium+ screens */
+  .main-content {
+    margin-left: 16.6667%;
+    width: calc(100% - 16.6667%);
+  }
 }
 
 /* ========================================================================
@@ -929,7 +932,7 @@ Breakpoints (Bootstrap 5):
     .sidebar {    position: static;    transform: none;    height: auto;    box-shadow: none;  }
     .sidebar.is-open {    transform: none;  }
   }
-
+  
   @media (min-width: 768px) and (max-width: 991.98px) /* Medium Screens */{
     [class*="col-m-"] { display: block; width: 100%!important; max-width: 100%!important; }
     .d-m-n { display: none !important; }
@@ -958,7 +961,7 @@ Breakpoints (Bootstrap 5):
   .pl-l-0 { padding-left: 0 !important; } .pl-l-1 { padding-left: 0.5rem !important; } .pl-l-2 { padding-left: 1.5rem !important; } .pl-l-3 { padding-left: 2.5rem !important; } .pl-l-4 { padding-left: 4rem !important; } .pl-l-5 { padding-left: 5rem !important; }
   .col-l-1 { flex: 0 0 6.6667%; max-width: 6.6667%; }  .col-l-2 { flex: 0 0 13.3333%; max-width: 13.3333%; }  .col-l-3 { flex: 0 0 20%; max-width: 20%; }  .col-l-4 { flex: 0 0 26.6667%; max-width: 26.6667%; }  .col-l-5 { flex: 0 0 33.3333%; max-width: 33.3333%; }  .col-l-6 { flex: 0 0 40%; max-width: 40%; }  .col-l-7 { flex: 0 0 46.6667%; max-width: 46.6667%; }  .col-l-8 { flex: 0 0 53.3333%; max-width: 53.3333%; }  .col-l-9 { flex: 0 0 60%; max-width: 60%; }  .col-l-10 { flex: 0 0 66.6667%; max-width: 66.6667%; }  .col-l-11 { flex: 0 0 73.3333%; max-width: 73.3333%; }  .col-l-12 { flex: 0 0 80%; max-width: 80%; }  .col-l-13 { flex: 0 0 86.6667%; max-width: 86.6667%; }  .col-l-14 { flex: 0 0 93.3333%; max-width: 93.3333%; }  .col-l-15 { flex: 0 0 100%; max-width: 100%; }
   .offset-l-1 { margin-left: 6.6667%; }  .offset-l-2 { margin-left: 13.3333%; }  .offset-l-3 { margin-left: 20%; }  .offset-l-4 { margin-left: 26.6667%; }  .offset-l-5 { margin-left: 33.3333%; }  .offset-l-6 { margin-left: 40%; }  .offset-l-7 { margin-left: 46.6667%; }  .offset-l-8 { margin-left: 53.3333%; }  .offset-l-9 { margin-left: 60%; }  .offset-l-10 { margin-left: 66.6667%; }  .offset-l-11 { margin-left: 73.3333%; }  .offset-l-12 { margin-left: 80%; } .offset-l-13 { margin-left: 86.6667%; }  .offset-l-14 { margin-left: 93.3333%; }
-  .sidebar {   transition: transform 0.3s cubic-bezier(.4,0,.2,1);  position: fixed;  top: 0;  left: 0;  height: 100vh;  z-index: 1000;  box-shadow: 2px 0 8px rgba(0,0,0,0.08);}
+  .sidebar {   transition: transform 0.3s cubic-bezier(.4,0,.2,1);  position: fixed;  top: 0;  left: 0;  height: 100vh;  width: 16.6667%;  z-index: 1000;  box-shadow: 2px 0 8px rgba(0,0,0,0.08);}
   .sidebar.is-open {  transform: translateX(0);}
 }
 
@@ -974,7 +977,7 @@ Breakpoints (Bootstrap 5):
   .pl-xl-0 { padding-left: 0 !important; } .pl-xl-1 { padding-left: 0.5rem !important; } .pl-xl-2 { padding-left: 1.5rem !important; } .pl-xl-3 { padding-left: 2.5rem !important; } .pl-xl-4 { padding-left: 4rem !important; } .pl-xl-5 { padding-left: 5rem !important; }
   .col-xl-1 { flex: 0 0 6.6667%; max-width: 6.6667%; }  .col-xl-2 { flex: 0 0 13.3333%; max-width: 13.3333%; }  .col-xl-3 { flex: 0 0 20%; max-width: 20%; }  .col-xl-4 { flex: 0 0 26.6667%; max-width: 26.6667%; }  .col-xl-5 { flex: 0 0 33.3333%; max-width: 33.3333%; }  .col-xl-6 { flex: 0 0 40%; max-width: 40%; }  .col-xl-7 { flex: 0 0 46.6667%; max-width: 46.6667%; }  .col-xl-8 { flex: 0 0 53.3333%; max-width: 53.3333%; }  .col-xl-9 { flex: 0 0 60%; max-width: 60%; }  .col-xl-10 { flex: 0 0 66.6667%; max-width: 66.6667%; }  .col-xl-11 { flex: 0 0 73.3333%; max-width: 73.3333%; }  .col-xl-12 { flex: 0 0 80%; max-width: 80%; }  .col-xl-13 { flex: 0 0 86.6667%; max-width: 86.6667%; }  .col-xl-14 { flex: 0 0 93.3333%; max-width: 93.3333%; }  .col-xl-15 { flex: 0 0 100%; max-width: 100%; }
   .offset-xl-1 { margin-left: 6.6667%; }  .offset-xl-2 { margin-left: 13.3333%; }  .offset-xl-3 { margin-left: 20%; }  .offset-xl-4 { margin-left: 26.6667%; }  .offset-xl-5 { margin-left: 33.3333%; }  .offset-xl-6 { margin-left: 40%; }  .offset-xl-7 { margin-left: 46.6667%; }  .offset-xl-8 { margin-left: 53.3333%; }  .offset-xl-9 { margin-left: 60%; }  .offset-xl-10 { margin-left: 66.6667%; }  .offset-xl-11 { margin-left: 73.3333%; }  .offset-xl-12 { margin-left: 80%; } .offset-xl-13 { margin-left: 86.6667%; }  .offset-xl-14 { margin-left: 93.3333%; }
-  .sidebar {   transition: transform 0.3s cubic-bezier(.4,0,.2,1);  position: fixed;  top: 0;  left: 0;  height: 100vh;  z-index: 1000;  box-shadow: 2px 0 8px rgba(0,0,0,0.08);}
+  .sidebar {   transition: transform 0.3s cubic-bezier(.4,0,.2,1);  position: fixed;  top: 0;  left: 0;  height: 100vh;  width: 16.6667%;  z-index: 1000;  box-shadow: 2px 0 8px rgba(0,0,0,0.08);}
   .sidebar.is-open {  transform: translateX(0);}
 }
 
