@@ -29,12 +29,12 @@
 body {font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
    font-size: 1rem;  
    line-height: 1.5;  
-   height: 100%;  
+   height: 100vh;  
    width: 100%; 
    overflow-x: auto;
    min-height: 100vh;  
    display: flex;  
-   
+   flex-direction: column;
 }
 
 a, a:visited {text-decoration: none; color: var(--blue-4); padding-bottom: 2px; transition: color 0.2s ease-in-out;} a:hover, a:focus {text-decoration: underline; padding-bottom: 2px; color: var(--purple-5);}
@@ -574,7 +574,7 @@ blockquote, .blockquote {  margin: 1rem 0;  padding: 1rem 1.5rem;  border-left: 
 /* ========================================================================
   Section: Grid & Layout Utilities
    ======================================================================== */
-.row {display: flex;flex-wrap: wrap; margin-left: -0.5rem; margin-right: -0.5rem;}
+.row {display: flex;  flex:1; margin-left: -0.5rem; margin-right: -0.5rem;}
 .col {flex: 1 0 0%; padding-left: 0.5rem; padding-right: 0.5rem;}
 /* ========================================================================
   Section: Container Utilities
@@ -843,7 +843,14 @@ img.img-fit, .img-fit {  width: 100%;  height: auto;  object-fit: cover;  displa
 /* ========================================================================
    Section: Sidebar Component
 ======================================================================== */
-.sidebar {position: relative;  min-height: 100vh;  display: flex;  flex-direction: column;  width: 16.6667%; /* default col-2 (2/12) */  max-width: 100vw;  background: var(--gray-2);  color: var(--gray-9);  transition: background 0.18s, color 0.18s, left 0.25s cubic-bezier(0.4,0,0.2,1);  z-index: 200; flex-shrink:0;}
+.sidebar {position: relative;  min-height: 100vh;  
+   display: flex;  flex-direction: column;  
+   width: 16.6667%; 
+   /* default col-2 (2/12) */  
+   max-width: 100vw;  background: var(--gray-2);  
+   color: var(--gray-9);  
+   transition: background 0.18s, color 0.18s, left 0.25s cubic-bezier(0.4,0,0.2,1);  
+   z-index: 200; flex-shrink:0; padding: 1rem;}
 /*
 @media (max-width: 767.98px) {
      .sidebar {    position: fixed;    top: 0;    /*left: -75vw;    width: 60vw !important;    min-width: 0;    max-width: 75vw;    height: 100vh;    z-index: 1200;    box-shadow: 2px 0 16px rgba(0,0,0,0.12);    transition: left 0.25s cubic-bezier(0.4,0,0.2,1);    display: block;  }
@@ -861,9 +868,17 @@ img.img-fit, .img-fit {  width: 100%;  height: auto;  object-fit: cover;  displa
   .sidebar-dim {    display: none !important;  }
   /* Shift main content to the right of sidebar on medium+ screens */
   .main-content {
-    margin-left: 16.6667%;
-    width: calc(100% - 16.6667%);
-  }
+    flex: 1;
+    overflow-x: auto;
+    width: calc(100% - 13.6667%);
+    left: 14.6667%;
+    position: fixed;
+    height: calc(99%);
+    background: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 /* ========================================================================
@@ -913,7 +928,7 @@ Breakpoints (Bootstrap 5):
     .pl-xs-0 { padding-left: 0 !important; } .pl-xs-1 { padding-left: 0.5rem !important; } .pl-xs-2 { padding-left: 1.5rem !important; } .pl-xs-3 { padding-left: 2.5rem !important; } .pl-xs-4 { padding-left: 4rem !important; } .pl-xs-5 { padding-left: 5rem !important; }
     .col-xs-1 { flex: 0 0 6.6667%; max-width: 6.6667%; }   .col-xs-2 { flex: 0 0 13.3333%; max-width: 13.3333%; }  .col-xs-3 { flex: 0 0 20%; max-width: 20%; }  .col-xs-4 { flex: 0 0 26.6667%; max-width: 26.6667%; }  .col-xs-5 { flex: 0 0 33.3333%; max-width: 33.3333%; }  .col-xs-6 { flex: 0 0 40%; max-width: 40%; }  .col-xs-7 { flex: 0 0 46.6667%; max-width: 46.6667%; }  .col-xs-8 { flex: 0 0 53.3333%; max-width: 53.3333%; }  .col-xs-9 { flex: 0 0 60%; max-width: 60%; }  .col-xs-10 { flex: 0 0 66.6667%; max-width: 66.6667%; } .col-xs-11 { flex: 0 0 73.3333%; max-width: 73.3333%; }  .col-xs-12 { flex: 0 0 80%; max-width: 80%; }  .col-xs-13 { flex: 0 0 86.6667%; max-width: 86.6667%; }  .col-xs-14 { flex: 0 0 93.3333%; max-width: 93.3333%; }  .col-xs-15 { flex: 0 0 100%; max-width: 100%; }
     .offset-xs-1 { margin-left: 6.6667%; }   .offset-xs-2 { margin-left: 13.3333%; }  .offset-xs-3 { margin-left: 20%; }  .offset-xs-4 { margin-left: 26.6667%; }  .offset-xs-5 { margin-left: 33.3333%; }  .offset-xs-6 { margin-left: 40%; }  .offset-xs-7 { margin-left: 46.6667%; }  .offset-xs-8 { margin-left: 53.3333%; }  .offset-xs-9 { margin-left: 60%; }  .offset-xs-10 { margin-left: 66.6667%; }  .offset-xs-11 { margin-left: 73.3333%; }  .offset-xs-12 { margin-left: 80%; }  .offset-xs-13 { margin-left: 86.6667%; }  .offset-xs-14 { margin-left: 93.3333%; }
-    .sidebar {    position: static;    transform: none;    height: auto;    box-shadow: none;  }
+    .sidebar {    position: relative;    transform: none;    height: auto;    box-shadow: none;  }
     .sidebar.is-open {    transform: none;  }
   }
   
@@ -929,7 +944,7 @@ Breakpoints (Bootstrap 5):
     .pl-s-0 { padding-left: 0 !important; } .pl-s-1 { padding-left: 0.5rem !important; } .pl-s-2 { padding-left: 1.5rem !important; } .pl-s-3 { padding-left: 2.5rem !important; } .pl-s-4 { padding-left: 4rem !important; } .pl-s-5 { padding-left: 5rem !important; }
     .col-s-1 { flex: 0 0 6.6667%; max-width: 6.6667%; }  .col-s-2 { flex: 0 0 13.3333%; max-width: 13.3333%; }  .col-s-3 { flex: 0 0 20%; max-width: 20%; }  .col-s-4 { flex: 0 0 26.6667%; max-width: 26.6667%; }  .col-s-5 { flex: 0 0 33.3333%; max-width: 33.3333%; }  .col-s-6 { flex: 0 0 40%; max-width: 40%; }  .col-s-7 { flex: 0 0 46.6667%; max-width: 46.6667%; }  .col-s-8 { flex: 0 0 53.3333%; max-width: 53.3333%; }  .col-s-9 { flex: 0 0 60%; max-width: 60%; }  .col-s-10 { flex: 0 0 66.6667%; max-width: 66.6667%; }  .col-s-11 { flex: 0 0 73.3333%; max-width: 73.3333%; }  .col-s-12 { flex: 0 0 80%; max-width: 80%; }  .col-s-13 { flex: 0 0 86.6667%; max-width: 86.6667%; }  .col-s-14 { flex: 0 0 93.3333%; max-width: 93.3333%; }  .col-s-15 { flex: 0 0 100%; max-width: 100%; }
     .offset-s-1 { margin-left: 6.6667%; }   .offset-s-2 { margin-left: 13.3333%; }    .offset-s-3 { margin-left: 20%; }    .offset-s-4 { margin-left: 26.6667%; }    .offset-s-5 { margin-left: 33.3333%; }    .offset-s-6 { margin-left: 40%; }    .offset-s-7 { margin-left: 46.6667%; }    .offset-s-8 { margin-left: 53.3333%; }    .offset-s-9 { margin-left: 60%; }    .offset-s-10 { margin-left: 66.6667%; }   .offset-s-11 { margin-left: 73.3333%; }    .offset-s-12 { margin-left: 80%; }   .offset-s-13 { margin-left: 86.6667%; }   .offset-s-14 { margin-left: 93.3333%; }
-    .sidebar {    position: static;    transform: none;    height: auto;    box-shadow: none;  }
+    .sidebar {    position: relative;    transform: none;    height: auto;    box-shadow: none;  }
     .sidebar.is-open {    transform: none;  }
   }
   
@@ -945,7 +960,7 @@ Breakpoints (Bootstrap 5):
     .pl-m-0 { padding-left: 0 !important; } .pl-m-1 { padding-left: 0.5rem !important; } .pl-m-2 { padding-left: 1.5rem !important; } .pl-m-3 { padding-left: 2.5rem !important; } .pl-m-4 { padding-left: 4rem !important; } .pl-m-5 { padding-left: 5rem !important; }
     .col-m-1 { flex: 0 0 6.6667%; max-width: 6.6667%; }  .col-m-2 { flex: 0 0 13.3333%; max-width: 13.3333%; }  .col-m-3 { flex: 0 0 20%; max-width: 20%; }  .col-m-4 { flex: 0 0 26.6667%; max-width: 26.6667%; }  .col-m-5 { flex: 0 0 33.3333%; max-width: 33.3333%; }  .col-m-6 { flex: 0 0 40%; max-width: 40%; }  .col-m-7 { flex: 0 0 46.6667%; max-width: 46.6667%; }  .col-m-8 { flex: 0 0 53.3333%; max-width: 53.3333%; }  .col-m-9 { flex: 0 0 60%; max-width: 60%; }  .col-m-10 { flex: 0 0 66.6667%; max-width: 66.6667%; }  .col-m-11 { flex: 0 0 73.3333%; max-width: 73.3333%; }  .col-m-12 { flex: 0 0 80%; max-width: 80%; }  .col-m-13 { flex: 0 0 86.6667%; max-width: 86.6667%; }  .col-m-14 { flex: 0 0 93.3333%; max-width: 93.3333%; }  .col-m-15 { flex: 0 0 100%; max-width: 100%; }
     .offset-m-1 { margin-left: 6.6667%; }   .offset-m-2 { margin-left: 13.3333%; }  .offset-m-3 { margin-left: 20%; }  .offset-m-4 { margin-left: 26.6667%; }  .offset-m-5 { margin-left: 33.3333%; }  .offset-m-6 { margin-left: 40%; }  .offset-m-7 { margin-left: 46.6667%; }  .offset-m-8 { margin-left: 53.3333%; }  .offset-m-9 { margin-left: 60%; }  .offset-m-10 { margin-left: 66.6667%; }  .offset-m-11 { margin-left: 73.3333%; }  .offset-m-12 { margin-left: 80%; }  .offset-m-13 { margin-left: 86.6667%; }  .offset-m-14 { margin-left: 93.3333%; }
-    .sidebar {    position: static;    transform: none;    height: auto;    box-shadow: none;  }
+    .sidebar {    position: relative;    transform: none;    height: auto;    box-shadow: none;  }
     .sidebar.is-open {    transform: none;  }
   }
   
