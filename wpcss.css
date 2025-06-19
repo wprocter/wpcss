@@ -906,8 +906,24 @@ img.img-fit, .img-fit {  width: 100%;  height: auto;  object-fit: cover;  displa
    Section: Grid System
 ======================================================================== */
 
-@media (min-width: 0) {.col-1 { flex: 0 0 6.6667%; max-width: 6.6667%; }.col-2 { flex: 0 0 13.3333%; max-width: 13.3333%; }.col-3 { flex: 0 0 20%; max-width: 20%; }.col-4 { flex: 0 0 26.6667%; max-width: 26.6667%; }.col-5 { flex: 0 0 33.3333%; max-width: 33.3333%; }.col-6 { flex: 0 0 40%; max-width: 40%; }.col-7 { flex: 0 0 46.6667%; max-width: 46.6667%; }.col-8 { flex: 0 0 53.3333%; max-width: 53.3333%; }.col-9 { flex: 0 0 60%; max-width: 60%; }.col-10 { flex: 0 0 66.6667%; max-width: 66.6667%; }.col-11 { flex: 0 0 73.3333%; max-width: 73.3333%; }.col-12 { flex: 0 0 80%; max-width: 80%; }.col-13 { flex: 0 0 86.6667%; max-width: 86.6667%; }.col-14 { flex: 0 0 93.3333%; max-width: 93.3333%; }.col-15 { flex: 0 0 100%; max-width: 100%; }}
-/* Responsive display utility classes 
+@media (min-width: 0) {
+   .col-1 { flex: 0 0 auto; width: 6.6667%; }
+   .col-2 { flex: 0 0 auto; width: 13.3333%; }
+   .col-3 { flex: 0 0 auto; width: 20%; }
+   .col-4 { flex: 0 0 auto; width: 26.6667%; }
+   .col-5 { flex: 0 0 auto; width: 33.3333%; }
+   .col-6 { flex: 0 0 auto; width: 40%; }
+   .col-7 { flex: 0 0 auto; width: 46.6667%; }
+   .col-8 { flex: 0 0 auto; width: 53.3333%; }
+   .col-9 { flex: 0 0 auto; width: 60%; }
+   .col-10 { flex: 0 0 auto; width: 66.6667%; }
+   .col-11 { flex: 0 0 auto; width: 73.3333%; }
+   .col-12 { flex: 0 0 auto; width: 80%; }
+   .col-13 { flex: 0 0 auto; width: 86.6667%; }
+   .col-14 { flex: 0 0 auto; width: 93.3333%; }
+   .col-15 { flex: 0 0 auto; width: 100%; }
+}
+/* Responsive display utility classes
 Breakpoints (Bootstrap 5):
   xs: <576px (default, no media query)
   sm: ≥576px
