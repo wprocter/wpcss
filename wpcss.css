@@ -864,6 +864,7 @@ img.img-fit, .img-fit {  width: 100%;  height: auto;  object-fit: cover;  displa
 .sidebar-header .sidebar-close:hover {  color: var(--red-5);}
 .sidebar-nav {  list-style: none;  margin: 0;  padding: 0;  flex-grow: 1;  overflow-y: auto;  display: flex;  flex-direction: column;}
 .sidebar-main {flex: 1 1 0%;}
+
 @media (min-width: 768px) {
   .sidebar {    position: fixed;    top: 0; left: 0;    height: 100vh;    width: 16.6667%;    box-shadow: none;    display: flex;  }
   .sidebar-dim {    display: none !important;  }
@@ -880,6 +881,7 @@ img.img-fit, .img-fit {  width: 100%;  height: auto;  object-fit: cover;  displa
     margin-bottom: 10px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+}
 }
 
 /* ========================================================================
