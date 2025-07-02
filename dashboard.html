@@ -3,51 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LMS Dashboard Demo - wpcss</title>
+  <title>DLS - wpcss</title>
   <link rel="stylesheet" href="wpcss.css">
 </head>
-<body class="bg-purple-6">
+<body class="bg-purple-8">
   <div class="container-full m0">
     <!-- Navbar -->
     <nav class="navbar bg-white d-l-n d-xl-n">
       <div class="d-f ai-c">
         <!-- Hamburger for mobile -->
-        <button id="sidebarToggle" class="d-ib btn btn-icon bg-gray-2 t-gray-8 br2 p-2 me-2" aria-label="Open sidebar" aria-controls="dashboardSidebar" aria-expanded="false" style="border:none;">
+        <button id="sidebarToggle" class="d-ib d-l-n d-xl-n btn bg-white t-purple-8 br2 p1 mr2" aria-label="Open sidebar" aria-controls="dashboardSidebar" aria-expanded="false" style="border:none;">
           <span class="t-1">&#9776;</span>
-        </button>
-        <span class="fw-700 fs-2 letter-spacing-1 t-gray-9">LMS</span>
+        </button>&nbsp;
+        <span class="t-purple-8"> Digital Learning System</span>
       </div>
       <div class="d-f ai-c gap-2">
-        <span class="br-circle bg-gray-2 t-gray-7 d-inline-flex ai-c jc-c" style="width:36px; height:36px; font-weight:600;">NR</span>
+        <span class="brad-circle bg-purple-8 t-orange-4 p1 d-if ai-c jc-c" style="width:36px; height:36px; font-weight:600;">NR</span>
         <span class="d-n d-m-ib">Niki Riggs</span>
+        <div class="d-ib d-l-n d-xl-n dropdown">
+          <button class="dropdown-toggle btn bg-white t-purple-8 br2 p1 mr2" type="button" aria-haspopup="menu" aria-expanded="false">
+            <span class="brad-circle bg-purple-8 t-orange-4 p1" style="width:24px; height:24px;">NR</span>
+          </button>
+          <div class="dropdown-menu bg-white br2 shadow2 py1">
+            <a href="#" class="d-b px2 py1 t-gray-8">Profile</a>
+            <a href="#" class="d-b px2 py1 t-gray-8">Settings</a>
+            <div class="dropdown-divider my1"></div>
+            <a href="#" class="d-b px2 py1 t-gray-8">Sign out</a>
+          </div>
+        </div>
       </div>
     </nav>
     
     <!-- Content Wrapper -->
     <div class="d-f vh-100 ">
       <!-- Sidebar (off-canvas on mobile) -->
-      <aside class="bg-purple-6 d-n d-l-b d-xl-b col-2" id="dashboardSidebar">
-        <div class="sidebar-header bg-purple-6 t-orange-4"><strong>
-          LMS</strong>
+      <aside class="bg-purple-8 d-n d-l-b d-xl-b col-2" id="dashboardSidebar">
+        <div class="sidebar-header bg-purple-8 t-orange-4 fd-l"><strong>
+          Digital Learning<br> System</strong>
           <button class="sidebar-close d-xs-b d-s-b d-m-b d-l-n d-xl-n" aria-label="Close sidebar">&times;</button>
         </div>
-        <nav class="sidebar-main bg-purple-6 t-white">
+        <nav class="sidebar-main bg-purple-8 t-white">
           <ul class="sidebar-nav">
-            <li><a href="#" class="d-b p4 py-3 t-white br2 mb-1">🏠 Dashboard</a></li>
-            <li><a href="#" class="d-b p4 py-3 t-white br2 mb-1">📚 Courses</a></li>
-            <li><a href="#" class="d-b p4 py-3 t-white br2 mb-1">📝 Assignments</a></li>
-            <li><a href="#" class="d-b p4 py-3 t-white br2 mb-1">📊 Grades</a></li>
-            <li><a href="#" class="d-b p4 py-3 t-white br2 mb-1">💬 Messages</a></li>
-            <li><a href="#" class="d-b p4 py-3 t-white br2 mb-1">⚙️ Settings</a></li>
+            <li><a href="#" class="d-b t-white br2 mb-1">🏠 Dashboard</a></li>
+            <li><a href="#" class="d-b t-white br2 mb-1">📚 Courses</a></li>
+            <li><a href="#" class="d-b t-white br2 mb-1">📝 Assignments</a></li>
+            <li><a href="#" class="d-b t-white br2 mb-1">📊 Grades</a></li>
+            <li><a href="#" class="d-b t-white br2 mb-1">💬 Messages</a></li>
+            <li><a href="#" class="d-b t-white br2 mb-1">⚙️ Settings</a></li>
           </ul>
         </nav>
+        <div class="sidebar-footer d-xs-n d-s-n d-m-n d-l-b d-xl-b p1">
+          <div class="row bg-white">
+            <div class="col-4">
+              <span class="brad-circle bg-purple-8 t-orange-4 p1 m1" style="width:24px; height:24px;">NR</span>
+            </div>
+            <div class="fw-600 t-white mb2">Niki Riggs</div>
+          </div>
+            <a href="#" class="d-b t-white p2 br2 hover-bg-purple-7">Sign out</a>
+        </div>
       </aside>
 
       <!-- Overlay for mobile sidebar -->
       <div id="sidebarOverlay" class="sidebar-dim d-n"></div>
 
       <!-- Main Content -->
-      <main class="col-15 p0 m0 col-l-13 col-xl-13 vh-100 bg-white of-xa mt-l-2 mt-xl-2 br-l-3 br-xl-2 main-xs main-s main-m ">
+      <main class="col-15 p0 m0 col-l-13 col-xl-13 vh-100 bg-white of-xa mt-l-1 mt-xl-1 main-xs main-s main-m " style="border-top-left-radius:0.25rem ;">
         <div class="bg-white m1 rounded-2 p2">
           <div class="">
             <h2>Welcome back, Niki!</h2>
@@ -122,35 +142,7 @@
 
   <script src="wpcss.js"></script>
   <script>
-    // Sidebar toggle logic for mobile
-    const sidebar = document.getElementById('dashboardSidebar');
-    const sidebarToggle = document.getElementById('sidebarToggle');
-    const sidebarOverlay = document.getElementById('sidebarOverlay');
-    const closeBtn = document.querySelector('.sidebar-close');
 
-    function openSidebar() {
-      sidebar.classList.add('open');
-      sidebarOverlay.style.display = 'block';
-      sidebarToggle.setAttribute('aria-expanded', 'true');
-      sidebar.setAttribute('tabindex', '0');
-      sidebar.focus();
-    }
-    function closeSidebar() {
-      sidebar.classList.remove('open');
-      sidebarOverlay.style.display = 'none';
-      sidebarToggle.setAttribute('aria-expanded', 'false');
-      sidebar.removeAttribute('tabindex');
-    }
-    sidebarToggle && sidebarToggle.addEventListener('click', openSidebar);
-    sidebarOverlay && sidebarOverlay.addEventListener('click', closeSidebar);
-    closeBtn && closeBtn.addEventListener('click', closeSidebar);
-    sidebar && sidebar.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') closeSidebar();
-    });
-    // Close sidebar on resize if needed
-    window.addEventListener('resize', () => {
-      if (window.innerWidth >= 768) closeSidebar();
-    });
   </script>
 </body>
 </html>

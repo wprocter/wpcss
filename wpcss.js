@@ -220,11 +220,40 @@ window.wpAlert = {
     return alert;
   }
 };
-// Sidebar off-canvas toggle helper
-window.SidebarToggle = function(sidebarSelector = '.sidebar', dimClass = 'sidebar-dim') {
-  const sidebar = document.querySelector(sidebarSelector);
-  if (!sidebar) return;
-  // Only for small screens
+    // Sidebar toggle logic for mobile
+    const sidebar = document.getElementById('dashboardSidebar');
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const closeBtn = document.querySelector('.sidebar-close');
+
+    function openSidebar() {
+      sidebar.classList.add('open');
+      sidebarOverlay.classList.remove('d-n');
+      sidebarToggle.setAttribute('aria-expanded', 'true');
+      sidebar.setAttribute('tabindex', '0');
+      sidebar.focus();
+    }
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      sidebarOverlay.classList.add('d-n');
+      sidebarToggle.setAttribute('aria-expanded', 'false');
+      sidebar.removeAttribute('tabindex');
+    }
+    sidebarToggle && sidebarToggle.addEventListener('click', openSidebar);
+    sidebarOverlay && sidebarOverlay.addEventListener('click', closeSidebar);
+    closeBtn && closeBtn.addEventListener('click', closeSidebar);
+    sidebar && sidebar.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeSidebar();
+    });
+    // Close sidebar on resize if needed
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 768) closeSidebar();
+    });
+    // Sidebar off-canvas toggle helper
+    window.SidebarToggle = function(sidebarSelector = '.sidebar', dimClass = 'sidebar-dim') {
+      const sidebar = document.querySelector(sidebarSelector);
+      if (!sidebar) return;
+      // Only for small screens
   function openSidebar() {
     sidebar.classList.add('open');
     let dim = document.createElement('div');
