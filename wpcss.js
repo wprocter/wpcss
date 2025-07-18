@@ -154,6 +154,76 @@ window.wpDropdown = {
 };
 // Auto-init on DOMContentLoaded
 document.addEventListener('DOMContentLoaded', () => { window.wpDropdown.init(); });
+// === CUSTOM .dd DROPDOWN ===
+// Usage: Add .dd, .dd-toggle, .dd-menu to any element.
+window.wpDD = {
+  init(root = document) {
+    root.querySelectorAll('.dd').forEach(dd => {
+      if (dd._wpDDBound) return;
+      const toggle = dd.querySelector('.dd-toggle');
+      const menu = dd.querySelector('.dd-menu');
+      if (!toggle || !menu) return;
+      dd._wpDDBound = true;
+      toggle.addEventListener('click', e => {
+        e.stopPropagation();
+        const isOpen = dd.classList.contains('open');
+        // close other open dd
+        document.querySelectorAll('.dd.open').forEach(d => {
+          if (d !== dd) d.classList.remove('open');
+        });
+        if (!isOpen) {
+          dd.classList.add('open');
+        } else {
+          dd.classList.remove('open');
+        }
+      });
+    });
+    // close on outside click
+    document.addEventListener('click', () => {
+      document.querySelectorAll('.dd.open').forEach(dd => {
+        dd.classList.remove('open');
+      });
+    });
+  }
+};
+// Auto-init custom dd on DOMContentLoaded
+document.addEventListener('DOMContentLoaded', () => { window.wpDD.init(); });
+// === SIMPLE MODAL JS HELPER ===
+// Usage: add .modalTrigger to any button/link with optional data-modal="modalId" (default id 'demoModal')
+window.wpSimpleModal = {
+  init(root = document) {
+    // openers
+    root.querySelectorAll('.modal-trigger').forEach(btn => {
+      if (btn._wpModalBound) return;
+      btn._wpModalBound = true;
+      btn.addEventListener('click', e => {
+        e.preventDefault();
+        e.stopPropagation();
+        const modalId = btn.dataset.modal || 'demoModal';
+        const modal = document.getElementById(modalId);
+        if (modal) {
+          modal.classList.add('open');
+        }
+      });
+    });
+    // closers: click on backdrop or close button
+    root.querySelectorAll('.simple-modal').forEach(modal => {
+      if (modal._wpModalClosed) return;
+      modal._wpModalClosed = true;
+      modal.addEventListener('click', e => {
+        if (e.target === modal || e.target.classList.contains('simple-modal-close')) {
+          modal.classList.remove('open');
+        }
+      });
+    });
+  }
+};
+// Auto-init simple modal on DOMContentLoaded (and immediately if already loaded)
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => { window.wpSimpleModal.init(); });
+} else {
+  window.wpSimpleModal.init();
+}
 // === ALERT JS HELPERS ===
 // Usage: wpAlert.show({
 //   message: 'Text',

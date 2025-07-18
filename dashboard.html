@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DLS - wpcss</title>
+  <title>Dashboard | DLS - wpcss</title>
   <link rel="stylesheet" href="wpcss.css">
 </head>
 <body class="bg-purple-8">
@@ -12,25 +12,27 @@
     <nav class="navbar bg-white d-l-n d-xl-n">
       <div class="d-f ai-c">
         <!-- Hamburger for mobile -->
-        <button id="sidebarToggle" class="d-ib d-l-n d-xl-n btn bg-white t-purple-8 br2 p1 mr2" aria-label="Open sidebar" aria-controls="dashboardSidebar" aria-expanded="false" style="border:none;">
+        <button id="sidebarToggle" class="d-ib d-l-n d-xl-n btn bg-purple-8 t-orange-4 br2 p1 mr2" aria-label="Open sidebar" aria-controls="dashboardSidebar" aria-expanded="false" style="border:none;">
           <span class="t-1">&#9776;</span>
         </button>&nbsp;
         <span class="t-purple-8"> Digital Learning System</span>
       </div>
       <div class="d-f ai-c gap-2">
-        <span class="brad-circle bg-purple-8 t-orange-4 p1 d-if ai-c jc-c" style="width:36px; height:36px; font-weight:600;">NR</span>
-        <span class="d-n d-m-ib">Niki Riggs</span>
-        <div class="d-ib d-l-n d-xl-n dropdown">
-          <button class="dropdown-toggle btn bg-white t-purple-8 br2 p1 mr2" type="button" aria-haspopup="menu" aria-expanded="false">
-            <span class="brad-circle bg-purple-8 t-orange-4 p1" style="width:24px; height:24px;">NR</span>
-          </button>
-          <div class="dropdown-menu bg-white br2 shadow2 py1">
-            <a href="#" class="d-b px2 py1 t-gray-8">Profile</a>
-            <a href="#" class="d-b px2 py1 t-gray-8">Settings</a>
-            <div class="dropdown-divider my1"></div>
-            <a href="#" class="d-b px2 py1 t-gray-8">Sign out</a>
+
+          <div class="dd">
+            <div class="dd-toggle t-white">
+              <span class="brad-circle bg-purple-8 t-orange-4 p1 d-if ai-c jc-c initials">NR</span>
+            </div>
+          
+            <div class="dd-menu" style="width: 200px; left:-150px;">
+              <a href="#" class="dd-item">My Account</a>
+              <p class="dd-divider"></p>
+              <a href="#" class="dd-item">Settings</a>
+              <a href="#" class="dd-item">Logout</a>
+            </div>
           </div>
-        </div>
+
+
       </div>
     </nav>
     
@@ -44,23 +46,32 @@
         </div>
         <nav class="sidebar-main bg-purple-8 t-white">
           <ul class="sidebar-nav">
-            <li><a href="#" class="d-b t-white br2 mb-1">🏠 Dashboard</a></li>
-            <li><a href="#" class="d-b t-white br2 mb-1">📚 Courses</a></li>
-            <li><a href="#" class="d-b t-white br2 mb-1">📝 Assignments</a></li>
-            <li><a href="#" class="d-b t-white br2 mb-1">📊 Grades</a></li>
-            <li><a href="#" class="d-b t-white br2 mb-1">💬 Messages</a></li>
-            <li><a href="#" class="d-b t-white br2 mb-1">⚙️ Settings</a></li>
+            <li><a href="dashboard.html" class="d-b t-white m1">🏠 Dashboard</a></li>
+            <li><a href="courses.html" class="d-b t-white m1">📚 Courses</a></li>
+            <li><a href="#" class="d-b t-white m1">📝 Assignments</a></li>
+            <li><a href="#" class="d-b t-white m1">📊 Grades</a></li>
+            <li><a href="#" class="d-b t-white m1">💬 Messages</a></li>
+            <li><a href="#" class="d-b t-white m1">⚙️ Settings</a></li>
           </ul>
         </nav>
-        <div class="sidebar-footer d-xs-n d-s-n d-m-n d-l-b d-xl-b p1">
-          <div class="row bg-white">
-            <div class="col-4">
-              <span class="brad-circle bg-purple-8 t-orange-4 p1 m1" style="width:24px; height:24px;">NR</span>
+        <div class="sidebar-footer d-xs-n d-s-n d-m-n d-l-b d-xl-b">
+
+          <div class="dd dropup bg-purple-7 m1 p1">
+            <div class="dd-toggle t-white">
+              <span class="brad-circle bg-purple-8 t-orange-4 p1 d-if ai-c jc-c initials">NR</span>
+              Niki Riggs <span class="t-gray-6 d-l-n"> <small>niki.riggs@example.com</small></span>
             </div>
-            <div class="fw-600 t-white mb2">Niki Riggs</div>
+          
+            <div class="dd-menu">
+              <a href="#" class="dd-item">My Account</a>
+              <p class="dd-divider"></p>
+              <a href="#" class="dd-item">Settings</a>
+              <a href="#" class="dd-item">Logout</a>
+            </div>
           </div>
-            <a href="#" class="d-b t-white p2 br2 hover-bg-purple-7">Sign out</a>
+
         </div>
+                
       </aside>
 
       <!-- Overlay for mobile sidebar -->
@@ -133,16 +144,42 @@
             </div>
 
           </div>
-          <br/><br/><br/> <br/><br/><br/> <br/><br/><br/> <br/><br/><br/> <br/><br/><br/> <br/><br/><br/>s
-          new text
+
+          <div class="cd mb-3">
+            <div class="cd-header">Announcements</div>
+            <div class="cd-body">
+              <ul class="m-0">
+                <li>New course available: <span class="t-purple-9">Introduction to Psychology</span></li>
+                <li>Webinar: <span class="t-purple-9">The Future of AI</span> (Date: 20 Jun)</li>
+                <li>Maintenance window: <span class="t-purple-9">22 Jun, 12 AM - 4 AM</span></li>
+              </ul>
+
+
+            </div>
+          </div>
+
+          <p class="t-gray-6">For more details, visit your <a href="courses.html" class="t-purple-8">Courses</a> page.</p>
+
+            <p>This is a <button class="btn modal-trigger" data-modal="demoModal">open modal</button> example.</p>
+
+            <p> a fullpage modal example <button class="btn modal-trigger" data-modal="demoModal">open modal</button></p>
+          </div>
+
         </div>
       </main>
     </div>
   </div>
 
+  <!-- Demo Modal -->
+  <div id="demoModal" class="simple-modal">
+    <div class="simple-modal-content">
+      <button class="simple-modal-close" aria-label="Close modal">&times;</button>
+      <h2>Modal Title</h2>
+      <p>This is a demo modal. You can put any content here.</p>
+      <p> <a href="courses.html" class="btn bg-blue-2 t-purple-8">Go to Courses</a></p>
+    </div>
+  </div>
   <script src="wpcss.js"></script>
-  <script>
-
-  </script>
-</body>
+  <!-- page-specific scripts can go here -->
+ </body>
 </html>

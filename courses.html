@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses | DLS - wpcss</title>
+  <link rel="stylesheet" href="wpcss.css">
+</head>
+<body class="bg-purple-8">
+  <div class="container-full m0">
+    <!-- Navbar -->
+    <nav class="navbar bg-white d-l-n d-xl-n">
+      <div class="d-f ai-c">
+        <!-- Hamburger for mobile -->
+        <button id="sidebarToggle" class="d-ib d-l-n d-xl-n btn bg-purple-8 t-orange-4 br2 p1 mr2" aria-label="Open sidebar" aria-controls="dashboardSidebar" aria-expanded="false" style="border:none;">
+          <span class="t-1">&#9776;</span>
+        </button>&nbsp;
+        <span class="t-purple-8"> Digital Learning System</span>
+      </div>
+      <div class="d-f ai-c gap-2">
+
+          <div class="dd">
+            <div class="dd-toggle t-white">
+              <span class="brad-circle bg-purple-8 t-orange-4 p1 d-if ai-c jc-c initials">NR</span>
+            </div>
+          
+            <div class="dd-menu" style="width: 200px; left:-150px;">
+              <a href="#" class="dd-item">My Account</a>
+              <p class="dd-divider"></p>
+              <a href="#" class="dd-item">Settings</a>
+              <a href="#" class="dd-item">Logout</a>
+            </div>
+          </div>
+
+
+      </div>
+    </nav>
+    
+    <!-- Content Wrapper -->
+    <div class="d-f vh-100 ">
+      <!-- Sidebar (off-canvas on mobile) -->
+      <aside class="bg-purple-8 d-n d-l-b d-xl-b col-2" id="dashboardSidebar">
+        <div class="sidebar-header bg-purple-8 t-orange-4 fd-l"><strong>
+          Digital Learning<br> System</strong>
+          <button class="sidebar-close d-xs-b d-s-b d-m-b d-l-n d-xl-n" aria-label="Close sidebar">&times;</button>
+        </div>
+        <nav class="sidebar-main bg-purple-8 t-white">
+          <ul class="sidebar-nav">
+            <li><a href="dashboard.html" class="d-b t-white m1">🏠 Dashboard</a></li>
+            <li><a href="courses.html" class="d-b t-white m1">📚 Courses</a></li>
+            <li><a href="#" class="d-b t-white m1">📝 Assignments</a></li>
+            <li><a href="#" class="d-b t-white m1">📊 Grades</a></li>
+            <li><a href="#" class="d-b t-white m1">💬 Messages</a></li>
+            <li><a href="#" class="d-b t-white m1">⚙️ Settings</a></li>
+          </ul>
+        </nav>
+        <div class="sidebar-footer d-xs-n d-s-n d-m-n d-l-b d-xl-b">
+
+          <div class="dd dropup bg-purple-7 m1 p1">
+            <div class="dd-toggle t-white">
+              <span class="brad-circle bg-purple-8 t-orange-4 p1 d-if ai-c jc-c initials">NR</span>
+              Niki Riggs <span class="t-gray-6 d-l-n"> <small>niki.riggs@example.com</small></span>
+            </div>
+          
+            <div class="dd-menu">
+              <a href="#" class="dd-item">My Account</a>
+              <p class="dd-divider"></p>
+              <a href="#" class="dd-item">Settings</a>
+              <a href="#" class="dd-item">Logout</a>
+            </div>
+          </div>
+
+        </div>
+                
+      </aside>
+
+      <!-- Overlay for mobile sidebar -->
+      <div id="sidebarOverlay" class="sidebar-dim d-n"></div>
+
+      <!-- Main Content -->
+      <main class="col-15 p0 m0 col-l-13 col-xl-13 vh-100 bg-white of-xa mt-l-1 mt-xl-1 main-xs main-s main-m " style="border-top-left-radius:0.25rem ;">
+        <div class="bg-white m1 rounded-2 p2">
+          <h1 class="t-purple-8">Courses</h1>
+          <p class="t-gray-6">Here you can find all your courses.</p>
+
+          <div class="course-list">
+            <div class="course-item bg-purple-1 p2 rounded-2 mb1">
+              <h2 class="t-purple-8">Course Title 1</h2>
+              <p class="t-gray-6">
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="wpcss.js"></script>
+  <script>
+
+  </script>
+</body>
+</html>
